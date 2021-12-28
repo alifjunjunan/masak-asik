@@ -1,0 +1,118 @@
+{
+  "user": [
+    {
+      "email": "admin@gmail.com",
+      "username": "admin-01",
+      "password": "12345",
+      "role": "admin",
+      "status": "active",
+      "subcribe": "",
+      "favorit": [],
+      "id": 0
+    },
+    {
+      "email": "alif@gmail.com",
+      "username": "alif",
+      "password": "12345",
+      "role": "user",
+      "status": "active",
+      "subcribes": "",
+      "favorit": [],
+      "id": 1
+    },
+    {
+      "email": "kuki@gmail.com",
+      "username": "kuki",
+      "password": "12345",
+      "role": "user",
+      "status": "active",
+      "subcribes": "",
+      "favorit": [],
+      "id": 2
+    }
+  ],
+  "productSubscribes": [
+    {
+      "paket": "Weekly",
+      "harga": 10000,
+      "durasi": "1 Minggu",
+      "penawaran": "Akses Semua Resep"
+    },
+    {
+      "paket": "Monthly",
+      "harga": 35000,
+      "durasi": "1 Bulan",
+      "penawaran": [
+        "Akses Semua Resep",
+        "Beragam Artikel"
+      ]
+    },
+    {
+      "paket": "Quaterly",
+      "harga": 1000000,
+      "durasi": "3 Bulan",
+      "penawaran": [
+        "Akses Semua Resep",
+        "Beragam Artikel"
+      ]
+    }
+  ],
+  "resep": [
+    {
+      "judul": "Resep Croffle Ice Cream, Dessert Kekinian yang Seru Dinikmati Saat di Rumah Aja",
+      "deskripsi": "Siapa yang tidak tahu croffle? Ya, inilah salah satu makanan hits yang melejit belakangan ini karena banyak penggemarnya. Croffle atau croissant waffle adalah camilan yang berasal dari croissant yang dipanggang dengan menggunakan waffle maker. Croissant yang memiliki cita rasa buttery dan tekstur berlapis dipadukan dengan cara memasak waffle. Hasilnya, kombinasi wangi karamel dari gula, krispi di luar dan lembut di dalam. Sungguh sempurna! Dengan segala kelebihan tadi, croffle cocok disantap kapanpun. Ketika sedang bersantai, WFH, meeting online, berkumpul bersama keluarga, ataupun kegiatan lainnya. Tidak heran kalau camilan satu ini begitu banyak dicari, sampai-sampai banyak yang rela untuk mengantre panjang! Namun, alangkah lebih baik kalau kita tetap di rumah saja. Tidak perlu khawatir, karena ada cara mudah untuk membuatnya. Padukan dengan es krim Wall’s Neopolitana yang creamy, pengalaman makan dessert serasa seperti di kafe, padahal kita sedang di rumah sendiri. Yuk, langsung kita coba buat!",
+      "kategori": "Dessert",
+      "porsi": 1,
+      "kesulitan": "Mudah",
+      "lama": "1 jam",
+      "bahan": [
+        {
+          "grup": "Bahan-bahan",
+          "item": [
+            "lembaran pastry sheet",
+            "50 gr gula pasir halus"
+          ]
+        },
+        {
+          "grup": "Topping",
+          "item": [
+            "2 scoop Wall's Neopolitana Ice Cream",
+            "potongan buah stroberi"
+          ]
+        }
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Potong puff pastry dalam berbentuk segitiga",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-puff-510x306.jpg"
+        },
+        {
+          "no": 2,
+          "langkah": "Gulung hingga berbentuk croissant",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-croissant-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Lumuri puff pastry dengan gula pasir. Panggang dengan cetakan waffle selama 10 menit atau hingga matang dan berwarna kecoklatan. Tunggu croffle hingga dingin",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-waffle-maker-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Lipat croffle menjadi dua dan beri 2 scoop Wall’s Neopolitana",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-es-krim-510x306.jpg"
+        },
+        {
+          "no": 5,
+          "langkah": "Beri taburan gula halus dan potongan buah stroberi sesuai dengan selera",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-garnish-510x306.jpg"
+        }
+      ],
+      "photo": [
+        "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-featured-780x440.jpg"
+      ]
+    }
+  ],
+  "artikel": [],
+  "userTransaction": []
+}
