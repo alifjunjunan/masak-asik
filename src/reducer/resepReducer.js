@@ -10,7 +10,12 @@ export const resepReducer = (state=INITIAL_STATE, action) => {
                 ...state,
                 listResep: action.payload
             }    
-        
+        case "ADD_DATA_RESEP":
+            console.log("data dari action payload ==>", action.payload)
+            return{
+                ...state,
+                ...action.payload
+            }
         default:
             return state;
     }

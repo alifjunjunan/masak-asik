@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import { Nav, NavItem, NavLink, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Button, Label, Spinner } from 'reactstrap'
 import { onLogin, onLogout, onRegist } from '../action'
@@ -88,7 +89,7 @@ const NavbarComponent = (props) => {
                 let res  = await dispatch(onLogin({...inputLogin}))
 
                 if (res.success) {
-                    toast.success('SUCCESS! Berhasil Login', {
+                    toast.success(`Selamat Datang!`, {
                         position: "top-right",
                         autoClose: 5000
                         });
@@ -132,11 +133,11 @@ const NavbarComponent = (props) => {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
+                    <ToastContainer />
                     <a href="/" className="navbar-brand">Masak Asik</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <ToastContainer />
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
@@ -155,6 +156,41 @@ const NavbarComponent = (props) => {
                             <li className="nav-item">
                                 <a href="#" className="nav-link">Premium</a>
                             </li>
+                            {
+                                username 
+                                    ?
+                                    <div className="dropdown d-lg-none">
+                                        <span class="badge rounded-pill bg-primary dropdown-toggle" id="profileDropdown" role="button" data-bs-toggle="dropdown" style={{ width: "80px"}}>{username}</span>
+                                        {
+                                            role == "user" 
+                                            ?
+                                        <ul className="dropdown-menu " aria-labelledby="profileDropdown">
+                                            <li><a href="#" className="dropdown-item">Profile</a></li>
+                                            <li><a href="#" className="dropdown-item">Premium</a></li>
+                                            <li><a href="#" className="dropdown-item">History</a></li>
+                                            <li><a href="#" className="dropdown-item">Favorit</a></li>
+                                            <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
+                                        </ul>
+                                        :
+                                        <ul className="dropdown-menu" aria-labelledby="profileDropdown">
+                                            <li>
+                                                <a href="#" className="dropdown-item">Profile</a>
+                                            </li>
+                                            <li>
+                                                <Link to="/resep-management" className="dropdown-item">
+                                                     {/* <a href="#" className="dropdown-item">Resep Management</a> */}
+                                                     Resep Management
+                                                </Link>
+                                            </li>
+                                            <li><a href="#" className="dropdown-item">Artikel Management</a></li>
+                                            <li><a href="#" className="dropdown-item">Transaction Management</a></li>
+                                            <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
+                                        </ul>
+                                        }
+                                    </div> 
+                                :
+                                <></>
+                            }
                         </ul>
                         <form action="" className="d-flex">
                             <div className="input-group">
@@ -170,12 +206,12 @@ const NavbarComponent = (props) => {
                                 :
                                  username 
                                     ?
-                                    <div className="dropdown m-2">
+                                    <div className="dropdown d-none d-lg-block m-2">
                                         <span class="badge rounded-pill bg-primary dropdown-toggle" id="profileDropdown" role="button" data-bs-toggle="dropdown" style={{ width: "80px"}}>{username}</span>
                                         {
                                             role == "user" 
                                             ?
-                                        <ul className="dropdown-menu" aria-labelledby="profileDropdown">
+                                        <ul className="dropdown-menu " aria-labelledby="profileDropdown">
                                             <li><a href="#" className="dropdown-item">Profile</a></li>
                                             <li><a href="#" className="dropdown-item">Premium</a></li>
                                             <li><a href="#" className="dropdown-item">History</a></li>
@@ -184,8 +220,15 @@ const NavbarComponent = (props) => {
                                         </ul>
                                         :
                                         <ul className="dropdown-menu" aria-labelledby="profileDropdown">
-                                            <li><a href="#" className="dropdown-item">Profile</a></li>
-                                            <li><a href="#" className="dropdown-item">Resep Management</a></li>
+                                            <li>
+                                                <a href="#" className="dropdown-item">Profile</a>
+                                            </li>
+                                            <li>
+                                                <Link to="/resep-management" className="dropdown-item">
+                                                     {/* <a href="#" className="dropdown-item">Resep Management</a> */}
+                                                     Resep Management
+                                                </Link>
+                                            </li>
                                             <li><a href="#" className="dropdown-item">Artikel Management</a></li>
                                             <li><a href="#" className="dropdown-item">Transaction Management</a></li>
                                             <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>

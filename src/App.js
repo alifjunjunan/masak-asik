@@ -8,7 +8,9 @@ import HomePage from './pages/HomePage';
 import NavbarComponent from './components/Navbar';
 import FooterComponent from './components/Footer';
 import { useDispatch } from 'react-redux';
-import { onKeepLogin } from './action';
+import { getResepAction, onKeepLogin } from './action';
+import ResepManagementPage from './pages/ResepManagementPage';
+import TambahResepPage from './pages/TambahResepPage';
 
 const App = () => {
 
@@ -17,6 +19,7 @@ const App = () => {
   
   useEffect(() => {
     keepLogin()
+    dispatch(getResepAction())
   },[])
 
   const keepLogin = async () => {
@@ -41,6 +44,8 @@ const App = () => {
         <NavbarComponent delay={loading}/>
         <Routes>
             <Route path="/" element={<HomePage/>}/>
+            <Route path="/resep-management" element={<ResepManagementPage/>}/>
+            <Route path="/resep-management/add" element={<TambahResepPage/>}/>
         </Routes>
         <FooterComponent/>
     </div>

@@ -25,3 +25,22 @@ export const getResepAction = () => {
         }
     }
 }
+
+export const addResepAction = (data) => {
+
+    return async (dispatch) => {
+
+        try {
+            let res = await axios.post(`${API_URL}/resep`,data)
+
+            dispatch({
+                type: "ADD_DATA_RESEP",
+                payload: res.data
+            })
+
+            return {success: true}
+        } catch (error) {
+            console.log(error)
+        }
+    }
+}

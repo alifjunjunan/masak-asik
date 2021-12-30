@@ -62,24 +62,14 @@
       "judul": "Resep Croffle Ice Cream, Dessert Kekinian yang Seru Dinikmati Saat di Rumah Aja",
       "deskripsi": "Siapa yang tidak tahu croffle? Ya, inilah salah satu makanan hits yang melejit belakangan ini karena banyak penggemarnya. Croffle atau croissant waffle adalah camilan yang berasal dari croissant yang dipanggang dengan menggunakan waffle maker. Croissant yang memiliki cita rasa buttery dan tekstur berlapis dipadukan dengan cara memasak waffle. Hasilnya, kombinasi wangi karamel dari gula, krispi di luar dan lembut di dalam. Sungguh sempurna! Dengan segala kelebihan tadi, croffle cocok disantap kapanpun. Ketika sedang bersantai, WFH, meeting online, berkumpul bersama keluarga, ataupun kegiatan lainnya. Tidak heran kalau camilan satu ini begitu banyak dicari, sampai-sampai banyak yang rela untuk mengantre panjang! Namun, alangkah lebih baik kalau kita tetap di rumah saja. Tidak perlu khawatir, karena ada cara mudah untuk membuatnya. Padukan dengan es krim Wall’s Neopolitana yang creamy, pengalaman makan dessert serasa seperti di kafe, padahal kita sedang di rumah sendiri. Yuk, langsung kita coba buat!",
       "kategori": "Dessert",
-      "porsi": 1,
+      "porsi": "1 orang",
       "kesulitan": "Mudah",
       "lama": "1 jam",
       "bahan": [
-        {
-          "grup": "Bahan-bahan",
-          "item": [
-            "lembaran pastry sheet",
-            "50 gr gula pasir halus"
-          ]
-        },
-        {
-          "grup": "Topping",
-          "item": [
-            "2 scoop Wall's Neopolitana Ice Cream",
-            "potongan buah stroberi"
-          ]
-        }
+        "lembaran pastry sheet",
+        "50 gr gula pasir halus",
+        "2 scoop Wall's Neopolitana Ice Cream",
+        "potongan buah stroberi"
       ],
       "instruksi": [
         {
@@ -108,9 +98,154 @@
           "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-garnish-510x306.jpg"
         }
       ],
-      "photo": [
-        "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-featured-780x440.jpg"
-      ]
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-featured-780x440.jpg",
+      "content": "",
+      "id": 0
+    },
+    {
+      "judul": "Sarapan Istimewa Resep Pancake Milk Tea dan Saus Apel",
+      "deskripsi": "Gurih adalah cita rasa khas aneka sarapan di Indonesia, baik itu dalam bentuk menu nasi kuning, nasi uduk, bubur, ataupun bakmi. Sementara itu di belahan dunia lain, pancake adalah menu sarapan sehari-hari. Jika kamu merasa bosan dengan sajian sarapan yang itu-itu saja, resep pancake ini dapat menjadi alternatif praktis.\n\nApakah kamu tahu bahwa pancake sebetulnya bukan hidangan asli Indonesia? Yup, jika dilihat dari asalnya, pancake atau pannenkoek adalah menu yang dibawa dari negeri Belanda. Kue dadar ini terbuat dari tepung terigu, air, susu, telur, dan gula, yang kemudian diolah menjadi adonan dan dimasak. Kamu juga bisa mengkreasikan resep ini dengan topping seperti sirup, coklat, keju, atau selai. Yum! Sudah terbayang nikmatnya, bukan?\n\nBiasanya, pancake sering ditemui di restoran, kafe ataupun kedai kopi. Variasinya pun bermacam-macam. Ada yang menggunakan resep pancake Belanda yang identik dengan bentuknya yang rata, namun ada juga yang menghidangkannya dalam bentuk fluffy a la Negeri Sakura.\n\nUntuk menikmati resep pancake sebagai menu sarapan, kamu bisa menyandingkannya dengan minuman segar seperti cheese tea, es kopi susu, atau SariWangi Milk Tea Caramel. Yang terakhir ini legitnya memanjakan lidah dan membuatmu semakin semangat untuk menjalani hari.\n\nSudah tidak sabar mencoba resep Pancake Milk Tea dan Saus Apel? Yuk, langsung saja berangkat ke dapur!",
+      "kategori": "Dessert",
+      "porsi": "4 orang",
+      "kesulitan": "Cukup Rumit",
+      "lama": "1 jam",
+      "bahan": [
+        "150 ml susu cair",
+        "1 sachet SariWangi Milk Tea Caramel",
+        "300 ml putih telur, kocok kaku",
+        "300 g tepung terigu",
+        "½ sdt baking powder",
+        "150 ml air hangat",
+        "5 kuning telur ayam",
+        "100 g mentega tawar, lelehkan",
+        "50 g gula pasir",
+        "Saus Apel",
+        "300 g apel Malang atau apel Manalagi",
+        "3 cm kayu manis",
+        "⅛ sdt garam",
+        "4 sdm brown sugar",
+        "1 butir cengkih",
+        "1 sdm air jeruk lemon"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Saus apel: Panaskan semua bahan di atas api kecil sambil diaduk hingga apel layu. Angkat.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Larutkan SariWangi Milk Tea Caramel dalam air hangat. Sisihkan.",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Campur rata tepung terigu, gula pasir, dan baking powder. Sisihkan",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Aduk susu, SariWangi Milk Tea Caramel, dan campuran tepung hingga rata dan tidak menggumpal. Masukkan kuning telur secara bertahap sambil diaduk.",
+          "photo": ""
+        },
+        {
+          "no": 5,
+          "langkah": "Masukkan putih telur dan mentega, aduk rata.",
+          "photo": ""
+        },
+        {
+          "no": 6,
+          "langkah": "Panaskan wajan datar atau wajan pancake di atas api kecil. Tuang 1 sendok sayur adonan, masak hingga matang di kedua sisinya. Angkat",
+          "photo": ""
+        },
+        {
+          "no": 7,
+          "langkah": "Sajikan pancake bersama topping.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/10/resep-pancake-apel-780x440.jpg",
+      "content": "",
+      "id": 1
+    },
+    {
+      "judul": "Resep Wedang Uwuh dengan Milk Tea yang Berempah dan Creamy",
+      "deskripsi": "Berasal dari Yogyakarta, wedang uwuh bermakna minuman ‘sampah’. Disebut demikian dikarenakan minuman ini berisi tanaman rimpang dan rempah, seperti jahe, kayu manis, cengkih, kayu secang, hingga serai. Semua bahan direbus hingga sari-sari dari rempah keluar, disajikan sebagai minuman penghangat badan.\n\nSejarah menyebutkan wedang uwuh berawal dari era Sultan Agung di zaman Kerajaan Mataram. Raja memerintahkan pengawalnya untuk membuatkan minuman yang mampu menghangatkan badan. Terciptalah wedang uwuh untuk minuman penghangat raja yang sedang bertapa di daerah Imogiri, Yogyakarta. Minuman ini pun dikenal masyarakat Yogyakarta bahkan menjadi salah satu minuman khas Nusantara yang bermanfaat untuk kesehatan.\n\nBerdasarkan bahan dasar, minuman hangat ini punya banyak manfaat kesehatan. Selain akrab sebagai salah satu rempah dalam minuman kesehatan, kayu manis seringkali dijadikan pemberi aroma wangi di dalam makanan seperti roti, kue, selai, dan compote (dessert buah asal Eropa). Kemudian ada kayu secang yang dikenal memberi warna merah kemerahan pada minuman yang berbentuk serutan kayu pada umumnya. \n\nRacikan wedang uwuh dapat ditemukan di pasar tradisional dalam keadaan sudah dikeringkan. Maka kamu akan dengan sangat mudah memasak jamu ini di rumah. Namun di resep kali ini aku ingin menyajikan sesuatu yang berbeda dengan sentuhan SariWangi Milk Tea Teh Tarik. Cita rasanya memperkaya cita rasa minuman hangat ini jadi lebih creamy sehingga berbeda dengan wedang uwuh lainnya. Selain itu, sentuhan SariWangi membuat kamu bereksplorasi dalam menyajikan minuman hangat tradisional ini menjadi yang tetap enak disajikan dingin. Pas banget disajikan sore hari bersama camilan jadul. ",
+      "kategori": "Dessert",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "30 menit",
+      "bahan": [
+        "6 cm jahe, kupas, potong serong",
+        "4 butir cengkih",
+        "4 batang serai, memarkan",
+        "2 sdm selasih siap santap",
+        "1 L air matang, untuk merebus",
+        "3 batang kayu manis 4 cm",
+        "10 g kayu secang",
+        "4 sachet SariWangi Milk Tea Teh Tarik",
+        "10 g gula batu"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Masak air bersama jahe, kayu manis, kayu secang, cengkih, dan serai hingga mendidih",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Kecilkan api, masak selama sekitar 20 menit. Angkat",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Masukkan SariWangi Milk Tea Teh Tarik, aduk rata",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Siapkan gelas saji yang sudah diisi dengan selasih. Tuang wedang uwuh, aduk. Sajikan.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/04/Wedang-Uwuh-Milk-Tea-780x440.jpg",
+      "content": "",
+      "id": 2
+    },
+    {
+      "judul": "Resep Pudding Silky Guava yang Lembut dan Segar untuk Dessert Keluarga",
+      "deskripsi": "Masih ingat resep pudding silky rasa mangga yang pernah hadir beberapa waktu lalu? Ternyata selain Buavita Mango, puding lembut populer ini juga bisa kamu buat menggunakan Buavita Guava. Puding silky adalah puding bertekstur halus dan lembut yang banyak dijual dalam porsi personal dengan aneka rasa.\nCita rasa cokelat, mangga, leci, taro, kopi, atau avokad adalah beberapa rasa yang akrab di lidah pencinta puding lembut ini. Kali ini, ada inspirasi praktis berupa Pudding Silky Guava dengan cita rasa penuh nutrisi dari Buavita Guava. Super praktis dan segar karena kamu bisa mendapatkan kesegaran buah guava dalam dessert segar ini. Kamu juga bisa menyajikan resep pudding ini bersama tambahan buah-buahan segar, seperti stroberi, anggur, kiwi, atau nanas\n",
+      "kategori": "Dessert",
+      "porsi": "4 porsi",
+      "kesulitan": "Mudah",
+      "lama": "30 menit",
+      "bahan": [
+        "500 ml Buavita Guava",
+        "400 ml susu cair ",
+        "1 sdt agar-agar bubuk",
+        "1 sdt jelly bubuk",
+        "4 sdm gula pasir "
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Masak Buavita Guava, susu cair, agar-agar bubuk, jelly bubuk, dan gula pasir sambil diaduk di atas api kecil hingga hampir mendidih. Angkat",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Saring larutan pudding. Tuang ke dalam cetakan",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Biarkan hingga mengeras. Dinginkan ke dalam kulkas. Sajikan",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/Resep-Pudding-Silky-Guava-780x440.jpg",
+      "content": "",
+      "id": 3
     }
   ],
   "artikel": [],
