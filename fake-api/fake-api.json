@@ -6,7 +6,8 @@
       "password": "12345",
       "role": "admin",
       "status": "active",
-      "subcribe": "",
+      "transaction": [],
+      "subscribe": [],
       "favorit": [],
       "id": 0
     },
@@ -16,7 +17,32 @@
       "password": "12345",
       "role": "user",
       "status": "active",
-      "subcribes": "",
+      "transaction": [],
+      "subscribe": [
+        {
+          "iduser": 1,
+          "username": "alif",
+          "invoice": "#INV/1641205550538",
+          "date": "3/1/2022",
+          "totalPayment": 10000,
+          "detail": [
+            {
+              "paket": "Weekly",
+              "harga": 10000,
+              "durasi": "1 Minggu",
+              "penawaran": [
+                "Akses Semua Resep",
+                "Simpan Resep Favoritmu"
+              ],
+              "id": 1
+            }
+          ],
+          "status": "Terkonfirmasi",
+          "buktiTransaksi": "https://carabimo.com/wp-content/uploads/2018/03/struk-atm-mandiri-asli.jpg",
+          "expired": "10/1/2022",
+          "id": 2
+        }
+      ],
       "favorit": [],
       "id": 1
     },
@@ -26,9 +52,71 @@
       "password": "12345",
       "role": "user",
       "status": "active",
-      "subcribes": "",
+      "transaction": [],
+      "subscribe": [
+        {
+          "iduser": 2,
+          "username": "kuki",
+          "invoice": "#INV/1641186332883",
+          "date": "3/1/2022",
+          "totalPayment": 100000,
+          "detail": [
+            {
+              "paket": "Quaterly",
+              "harga": 100000,
+              "durasi": "3 Bulan",
+              "penawaran": [
+                "Akses Semua Resep",
+                "Simpan resep Favoritmu",
+                "Beragam Artikel"
+              ],
+              "id": 3
+            }
+          ],
+          "status": "Terkonfirmasi",
+          "buktiTransaksi": "https://pbs.twimg.com/media/EUQUv6RU8AEgNdO.jpg",
+          "expired": "3/4/2022",
+          "id": 1
+        }
+      ],
       "favorit": [],
       "id": 2
+    },
+    {
+      "email": "Brian@gmail.com",
+      "username": "brianB",
+      "password": "12345",
+      "role": "user",
+      "status": "active",
+      "transaction": [],
+      "subscribe": [
+        {
+          "iduser": 3,
+          "username": "brianB",
+          "invoice": "#INV/1641301851816",
+          "date": "4/1/2022",
+          "totalPayment": 35000,
+          "detail": [
+            {
+              "paket": "Monthly",
+              "harga": 35000,
+              "durasi": "1 Bulan",
+              "penawaran": [
+                "Akses Semua Resep",
+                "Simpan resep Favoritmu",
+                "Beragam Artikel"
+              ],
+              "id": 2
+            }
+          ],
+          "status": "Terkonfirmasi",
+          "buktiTransaksi": "https://pbs.twimg.com/media/EdX2hmXUYAE4MXo?format=jpg&name=large",
+          "expired": "4/2/2022",
+          "id": 3
+        }
+      ],
+      "favorit": [],
+      "id": 3
     }
   ],
   "productSubscribes": [
@@ -36,7 +124,11 @@
       "paket": "Weekly",
       "harga": 10000,
       "durasi": "1 Minggu",
-      "penawaran": "Akses Semua Resep"
+      "penawaran": [
+        "Akses Semua Resep",
+        "Simpan Resep Favoritmu"
+      ],
+      "id": 1
     },
     {
       "paket": "Monthly",
@@ -44,17 +136,21 @@
       "durasi": "1 Bulan",
       "penawaran": [
         "Akses Semua Resep",
+        "Simpan resep Favoritmu",
         "Beragam Artikel"
-      ]
+      ],
+      "id": 2
     },
     {
       "paket": "Quaterly",
-      "harga": 1000000,
+      "harga": 100000,
       "durasi": "3 Bulan",
       "penawaran": [
         "Akses Semua Resep",
+        "Simpan resep Favoritmu",
         "Beragam Artikel"
-      ]
+      ],
+      "id": 3
     }
   ],
   "resep": [
@@ -99,7 +195,7 @@
         }
       ],
       "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-featured-780x440.jpg",
-      "content": "",
+      "content": "Gratis",
       "id": 0
     },
     {
@@ -165,52 +261,8 @@
         }
       ],
       "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/10/resep-pancake-apel-780x440.jpg",
-      "content": "",
+      "content": "Gratis",
       "id": 1
-    },
-    {
-      "judul": "Resep Wedang Uwuh dengan Milk Tea yang Berempah dan Creamy",
-      "deskripsi": "Berasal dari Yogyakarta, wedang uwuh bermakna minuman ‘sampah’. Disebut demikian dikarenakan minuman ini berisi tanaman rimpang dan rempah, seperti jahe, kayu manis, cengkih, kayu secang, hingga serai. Semua bahan direbus hingga sari-sari dari rempah keluar, disajikan sebagai minuman penghangat badan.\n\nSejarah menyebutkan wedang uwuh berawal dari era Sultan Agung di zaman Kerajaan Mataram. Raja memerintahkan pengawalnya untuk membuatkan minuman yang mampu menghangatkan badan. Terciptalah wedang uwuh untuk minuman penghangat raja yang sedang bertapa di daerah Imogiri, Yogyakarta. Minuman ini pun dikenal masyarakat Yogyakarta bahkan menjadi salah satu minuman khas Nusantara yang bermanfaat untuk kesehatan.\n\nBerdasarkan bahan dasar, minuman hangat ini punya banyak manfaat kesehatan. Selain akrab sebagai salah satu rempah dalam minuman kesehatan, kayu manis seringkali dijadikan pemberi aroma wangi di dalam makanan seperti roti, kue, selai, dan compote (dessert buah asal Eropa). Kemudian ada kayu secang yang dikenal memberi warna merah kemerahan pada minuman yang berbentuk serutan kayu pada umumnya. \n\nRacikan wedang uwuh dapat ditemukan di pasar tradisional dalam keadaan sudah dikeringkan. Maka kamu akan dengan sangat mudah memasak jamu ini di rumah. Namun di resep kali ini aku ingin menyajikan sesuatu yang berbeda dengan sentuhan SariWangi Milk Tea Teh Tarik. Cita rasanya memperkaya cita rasa minuman hangat ini jadi lebih creamy sehingga berbeda dengan wedang uwuh lainnya. Selain itu, sentuhan SariWangi membuat kamu bereksplorasi dalam menyajikan minuman hangat tradisional ini menjadi yang tetap enak disajikan dingin. Pas banget disajikan sore hari bersama camilan jadul. ",
-      "kategori": "Dessert",
-      "porsi": "4 orang",
-      "kesulitan": "Mudah",
-      "lama": "30 menit",
-      "bahan": [
-        "6 cm jahe, kupas, potong serong",
-        "4 butir cengkih",
-        "4 batang serai, memarkan",
-        "2 sdm selasih siap santap",
-        "1 L air matang, untuk merebus",
-        "3 batang kayu manis 4 cm",
-        "10 g kayu secang",
-        "4 sachet SariWangi Milk Tea Teh Tarik",
-        "10 g gula batu"
-      ],
-      "instruksi": [
-        {
-          "no": 1,
-          "langkah": "Masak air bersama jahe, kayu manis, kayu secang, cengkih, dan serai hingga mendidih",
-          "photo": ""
-        },
-        {
-          "no": 2,
-          "langkah": "Kecilkan api, masak selama sekitar 20 menit. Angkat",
-          "photo": ""
-        },
-        {
-          "no": 3,
-          "langkah": "Masukkan SariWangi Milk Tea Teh Tarik, aduk rata",
-          "photo": ""
-        },
-        {
-          "no": 4,
-          "langkah": "Siapkan gelas saji yang sudah diisi dengan selasih. Tuang wedang uwuh, aduk. Sajikan.",
-          "photo": ""
-        }
-      ],
-      "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/04/Wedang-Uwuh-Milk-Tea-780x440.jpg",
-      "content": "",
-      "id": 2
     },
     {
       "judul": "Resep Pudding Silky Guava yang Lembut dan Segar untuk Dessert Keluarga",
@@ -244,10 +296,173 @@
         }
       ],
       "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/Resep-Pudding-Silky-Guava-780x440.jpg",
-      "content": "",
+      "content": "Premium",
       "id": 3
+    },
+    {
+      "judul": "Resep Mie Bakso, Hidangan Tepat Pembuka Musim Hujan",
+      "deskripsi": "Musim hujan sudah mulai datang. Saat cuaca dingin, sajian berkuah hangat sangat cocok dihidangkan. Salah satu menu favorit adalah mie bakso! Tak perlu jauh-jauh cari tukang bakso, kita juga bisa kok mengolah resep mie bakso sendiri di rumah.\n\nMie bakso biasanya jadi favorit seluruh anggota keluarga, dari anak-anak hingga dewasa. Agar semua orang bisa menikmatinya, pisahkan sambal, daun bawang, daun seledri, dan merica. Setiap orang bisa meracik sesuai selera. Tentunya suasanya juga bertambah seru!\n\nPada resep mie bakso yang satu ini, kita menggunakan langkah-langkah yang sederhana. Khusus untuk para ibu yang tak punya banyak waktu, kamu bisa kok membeli bakso yang sudah jadi di supermarket atau beli langsung bakso siap pakai di tukang bakso langganan. Namun, jika punya waktu lebih, mengolah sendiri bola-bola bakso dari daging cincang juga lebih sehat, ini tips membuat bakso rumahan.\n\nRempah yang kita gunakan juga tak rumit untuk resep kuah bakso ini. Semua bumbunya mudah ditemukan. Salah satu rempah khas yang menjadi pembeda adalah bubuk pala. Sudah tak sabar ingin memasaknya? Yuk, kita langsung olah resep mie bakso satu ini!",
+      "kategori": "Daging",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "40 menit",
+      "bahan": [
+        "200 gr mie telur, rebus",
+        "1 batang daun bawang, iris",
+        "4 lembar kulit pangsit, goreng"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Pertama, kita siapkan kuah terlebih dahulu. Rebus air, lalu masukkan Royco Kaldu Sapi dan bakso. Tunggu hingga mendidih",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Setelah mendidih, masukkan garam, merica, bubuk pala, aduk hingga rata. Tambahkan Bango Kecap Manis, masak sampai matang",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Dalam mangkuk, masukkan mie telor yang sudah direbus sebelumnya. Tambahkan kuah bakso. Masukkan pangsit goreng dan caisim",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Bubuhkan daun bawang yang telah diiris serta bawang merah goreng. Sajikan selagi hangat.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2019/11/resep-mie-bakso-780x440.jpg",
+      "content": "Gratis",
+      "id": 5
     }
   ],
-  "artikel": [],
-  "userTransaction": []
+  "artikel": [
+    {
+      "judul": "Simak Perbedaan Panci Stainless Steel ",
+      "deskripsi": "Panci stainless steel sangat familiar digunakan para ibu di rumah. Ada beberapa alasan yang membuat panci atau wajan stainless steel populer digunakan di dapur. Panci stainless steel terbaik memiliki ketahanan yang tinggi dan mudah dicuci. Panci atau wajan dengan bahan ini juga cukup mudah didapatkan di pasar manapun, dan harga panci stainless tebal sekalipun harganya masih relatif terjangkau.\nMeski memiliki banyak alasan untuk dipilih, masih ada banyak material panci atau wajan lain yang bisa digunakan di rumah. Bahkan, beberapa di antaranya memiliki kelebihan dibandingkan bahan stainless steel. Apa sajakah itu?\n\n1. Cast Iron (besi tuang atau besi tempa)\nWajan cast iron lebih berat dibandingkan dengan stainless steel dan harganya pun juga relatif lebih mahal. Wajan cast iron memiliki tekstur anti lengket dan aman digunakan untuk proses memasak sehari-hari. Hanya saja, wajan cast iron membutuhkan perawatan ekstra yang membedakannya dengan wajan antilengket pada umumnya. Itulah sebabnya Masak Apa Hari Ini pernah berbagi tips dan trik cara merawat wajan cast iron yang patut disimak terlebih dahulu bila berencana memilikinya.\n\n2. Keramik\nBahan keramik tengah naik daun dalam beberapa tahun terakhir ini. Selain karena bentuknya yang lebih estetik, wajan atau panci keramik juga antilengket dan bisa menghantarkan panas dengan baik. Hanya, bila dibandingkan dengan stainless steel, wajan dengan bahan ceramic lebih mudah retak atau pecah. Selain itu, harganya juga sedikit relatif lebih mahal\n\n3. Kaca\nPanci dan wajan yang menggunakan bahan kaca juga telah dikenal mereka yang gemar memasak sejak lama. Secara kebersihan, proses membersihkan wajan kaca lebih mudah dibandingkan dengan stainless steel. Hanya saja, panci atau wajan kaca lebih tepat digunakan sebagai wadah saji. Ini dikarenakan tidak semua makanan bisa diolah dengan panci kaca.\n\n4. Tembaga\nInilah bahan wajan yang kerap digunakan para chef profesional. Bahan tembaga disukai para profesional karena mampu mendistribusikan panas secara merata ketika memasak, meskipun memang bahannya agak berat untuk diangkat. Selain itu, siapapun pasti terpukau akan kehadiran semua bahan tembaga di dapur kita karena tampilannya yang profesional. Hanya saja, bahan tembaga relatif mahal dan perlu dipoles secara rutin, berbeda dengan wajan stainless steel yang lebih mudah perawatannya.\n\n5. Aluminium\nAdakah alat masak yang lebih murah dari bahan stainless steel? Jawabannya adalah panci aluminium. Panci seperti ini sangat mudah ditemukan di pasar tradisional. Namun sayangnya, panci aluminium tidak terlalu aman digunakan untuk memasak. Kandungan aluminium berpotensi meresap ke dalam masakan tertentu dan rasanya menjadi metalik alias seperti logam.\n\nMana sajakah bahan panci dan wajan yang pernah atau sedang dimiliki? Dengan informasi singkat ini, kita tentu akan semakin memahami kebutuhan masak sehari-hari yang bisa disesuaikan dengan budget untuk berinvestasi peralatan dapur kita.",
+      "kategori": "Inspirasi Dapur",
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2019/05/panci-stainless-steel-4_edited-768x512.jpg",
+      "date": "1-1-2022",
+      "content": "Premium",
+      "paket": [
+        "Monthly",
+        "Quaterly"
+      ],
+      "id": 1
+    },
+    {
+      "judul": "3 Inspirasi Resep Frozen Food Rumahan ",
+      "deskripsi": "Bagi kamu yang tak punya banyak waktu di dapur, menyetok menu frozen food bisa jadi salah satu solusi masak praktis. Dengan stok makanan siap saji di freezer, kita tak perlu lagi menguras waktu untuk melakukan berbagai macam persiapan sebelum memasak. Cukup luangkan waktu beberapa menit untuk menghangatkan di atas kompor ataupun microwave, makanan pun sudah siap santap.\n\nSupaya lebih segar dan juga sehat kamu bisa menyiapkan sendiri frozen food di rumah. Pada dasarnya frozen food tak hanya terbatas pada makanan siap saji seperti bakso, sosis, atau nugget. Masakan khas Nusantara pun bisa kita jadikan sebagai frozen food rumahan, misalnya semur ayam dan rendang daging.\n\nBerikut adalah beberapa opsi resep yang bisa kamu racik sendiri di rumah. Yuk, intip satu per satu!\n\n1. Rolade daging, menu mewah akhir pekan\n\nOlahan daging giling dan telur ini bisa jadi stok makanan andalanmu. Resep rolade daging kita olah terlebih dahulu, tapi jangan langsung digoreng, ya. Setelah rolade dikukus dan matang, diamkan beberapa menit hingga suhu ruang. Tak perlu langsung dipotong, rolade yang masih berbentuk lonjong dan panjang kita simpan di freezer.\n\nRolade bisa bertahan hingga 4 bulan dalam freezer. Saat kita mau menyantapnya, tinggal keluarkan rolade, potong sesuai selera, dan goreng. Kamu juga bisa menumisnya kembali dengan berbagai bumbu, seperti bumbu asam manis atau bumbu kecap.\n\n2. Semur ayam, cocok untuk sajian sehari-hari\n\nSemur ayam juga bisa bertahan sekitar 3-4 bulan jika kita simpan di freezer. Kita olah resep semur ayam seperti biasa. Setelah matang, diamkan beberapa saat hingga mencapai suhu ruang. Hindari buru-buru memasukkan semur ayam ketika masih panas ke freezer.\n\nAda baiknya kamu membagi semur ayam ke dalam beberapa wadah sesuai porsi sekali makan. Hal ini akan memudahkanmu ketika akan memasaknya nanti. Kamu bisa menggunakan kotak makanan kedap udara atau plastik dengan ziplock untuk menyimpannya di freezer.\n\n3. Ayam goreng lengkuas, meresap hingga ke dalam\n\nBosan dengan ayam ungkep yang biasa? Ayo, kita masak resep ayam goreng lengkuas ini! Setelah ayam diungkep, kita bisa menyimpannya di kulkas. Caranya tak jauh berbeda dengan dua menu di atas. Tunggu hingga ayam hasil ungkep tidak terlalu panas, masukkan ke dalam wadah kedap udara, lalu bekukan.",
+      "kategori": "Inspirasi Dapur",
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/08/frozen-food-768x512.jpg",
+      "date": "4-1-2022",
+      "content": "Premium",
+      "paket": [
+        "Monthly",
+        "Quaterly"
+      ],
+      "id": 2
+    },
+    {
+      "judul": "Tips Masak Sayur Sup Rasa Lezat yang Kamu Perlu Tahu!",
+      "deskripsi": "Sup adalah menu hidangan berkuah favorit dari banyak makanan di Nusantara. Apalagi sup ayam sayuran, kita pasti takkan bisa menolak kelezatan makanan rumahan yang satu ini. Tapi sebelum memasaknya, kita wajib memahami tips masak sayur sup yang bisa membantumu menghasilkan kuah sup yang sedap dan segar.\n\nDi Indonesia, jenis hidangan sup sangat banyak dengan bahan utama hewani yang berbeda-beda – seperti sapi, kambing, ayam, dan ikan. Variasinya pun terbilang banyak dan sering disajikan bersama lontong ataupun bihun seperti soto. Beberapa tips masak sayur sup ini dikelompokkan berdasarkan bahan utamanya.\nSup atau soto berbahan tulang iga atau sumsum\n\nUntuk sup berbahan tulang iga atau tulang sumsum, rebus tulang iga atau sumsum sebanyak dua kali untuk menghilangkan kotoran dan mengurangi lemak berlebih pada bahan utama. Caranya adalah dengan merebus tulang sumsum atau iga hingga mendidih, buang airnya dan cuci bersih dari kotoran yang menempel di panci. Ganti dengan air baru untuk membuat kaldu atau sup. Agar sari-sari dalam tulang keluar, rebus kaldu selama beberapa jam dengan api kecil.\ntips masak sayur sup\n\nSup ikan atau seafood\n\nPastikan ikan didapat dalam keadaan segar dan tidak berbau amis untuk menghasilkan kuah yang sedap. Sertakan bumbu atau rempah seperti serai, jahe, daun jeruk, lengkuas, dan bawang-bawangan pada proses perebusan untuk menyamarkan bau ikan. Untuk sup seafood, gunakan tulang ikan atau kulit dan kepala udang untuk membuat rasa kaldu yang kuat.\n\nTips masak sayur sup ayam\n\nGunakan banyak tulang dengan daging untuk menghasilkan kaldu yang kaya rasa. Untuk sup ayam, kita bisa menggunakan bagian punggung dan paha untuk menghasilkan kaldu gurih. Untuk sup sayuran, masukkan potongan dada ayam di tengah proses memasak karena bagian dada ayam yang cenderung lebih cepat matang. Selain itu, mencelupkan bawang bombay saat merebus kaldu membuat cita rasa kaldu lebih sedap dan kaya.\n\nJika ingin menyiapkan sup dengan cepat, terutama untuk sup berbahan daging yang durasi memasaknya cukup memakan waktu, kita bisa menyiapkan beberapa jenis kaldu dalam freezer. Caranya, masak kaldu dengan bahan utama dan bumbu. Setelah matang, biarkan hingga tidak panas.\n\nSimpan kaldu dalam freezer dengan ukuran sesuai dengan kebutuhan sekali masak. Kita bisa membagi kaldu dalam beberapa tempat agar memudahkan kita ketika mencairkannya. Saat akan memasak, kita hanya memanaskan kaldu siap pakai, dan memasaknya bersama sayuran atau bahan isi lainnya. Jauh lebih praktis! ",
+      "kategori": "Tips Masak",
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/shutterstock_1146053231-768x512.jpg",
+      "date": "4-1-2022",
+      "content": "Premium",
+      "paket": [
+        "Monthly",
+        "Quaterly"
+      ],
+      "id": 3
+    },
+    {
+      "judul": "Cara Masak Telur Setengah Matang a la Restoran",
+      "deskripsi": "",
+      "kategori": "Tips Masak",
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/11/cara-buat-telur-separuh-masak-2-768x519.jpg",
+      "date": "4-1-2022",
+      "content": "Premium",
+      "paket": [
+        "Monthly",
+        "Quaterly"
+      ],
+      "id": 4
+    }
+  ],
+  "userTransaction": [
+    {
+      "iduser": 2,
+      "username": "kuki",
+      "invoice": "#INV/1641186332883",
+      "date": "3/1/2022",
+      "totalPayment": 100000,
+      "detail": [
+        {
+          "paket": "Quaterly",
+          "harga": 100000,
+          "durasi": "3 Bulan",
+          "penawaran": [
+            "Akses Semua Resep",
+            "Simpan resep Favoritmu",
+            "Beragam Artikel"
+          ],
+          "id": 3
+        }
+      ],
+      "status": "Terkonfirmasi",
+      "buktiTransaksi": "https://pbs.twimg.com/media/EUQUv6RU8AEgNdO.jpg",
+      "expired": "3/4/2022",
+      "id": 1
+    },
+    {
+      "iduser": 1,
+      "username": "alif",
+      "invoice": "#INV/1641205550538",
+      "date": "3/1/2022",
+      "totalPayment": 10000,
+      "detail": [
+        {
+          "paket": "Weekly",
+          "harga": 10000,
+          "durasi": "1 Minggu",
+          "penawaran": [
+            "Akses Semua Resep",
+            "Simpan Resep Favoritmu"
+          ],
+          "id": 1
+        }
+      ],
+      "status": "Terkonfirmasi",
+      "buktiTransaksi": "https://carabimo.com/wp-content/uploads/2018/03/struk-atm-mandiri-asli.jpg",
+      "expired": "10/1/2022",
+      "id": 2
+    },
+    {
+      "iduser": 3,
+      "username": "brianB",
+      "invoice": "#INV/1641301851816",
+      "date": "4/1/2022",
+      "totalPayment": 35000,
+      "detail": [
+        {
+          "paket": "Monthly",
+          "harga": 35000,
+          "durasi": "1 Bulan",
+          "penawaran": [
+            "Akses Semua Resep",
+            "Simpan resep Favoritmu",
+            "Beragam Artikel"
+          ],
+          "id": 2
+        }
+      ],
+      "status": "Terkonfirmasi",
+      "buktiTransaksi": "https://pbs.twimg.com/media/EdX2hmXUYAE4MXo?format=jpg&name=large",
+      "expired": "4/2/2022",
+      "id": 3
+    }
+  ]
 }

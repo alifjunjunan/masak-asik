@@ -4,11 +4,12 @@ import { Link, Navigate } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import { Button, FormGroup, Input, InputGroup, Label } from 'reactstrap'
 import { addResepAction } from '../action'
+import { AiOutlineDelete, AiOutlineMinusSquare } from "react-icons/ai";
+import {BsPlusSquare} from 'react-icons/bs'
 
 const TambahResepPage = () => {
 
     const [bahan, setBahan] = useState([""])
-    const [itemBahan, setItemBahan] = useState("")
     const [instruksi, setInstruksi] = useState([{no: null, langkah: "", photo: ""}])
     const [resep, setResep] = useState({judul: "", deskripsi: "", kategori: "", porsi: "", kesulitan: "", lama: "",bahan: [],instruksi: [] ,photo: "" ,content: "" })
     const [pindah, setpindah] = useState(false)
@@ -23,10 +24,29 @@ const TambahResepPage = () => {
         setBahan(temp)
     }
 
+    const onBtDeleteBahan = (idx) => {
+        let temp = [...bahan]
+
+        temp.splice(idx,1)
+
+        setBahan(temp)
+
+        console.log(temp)
+    }
+
     const onBtAddLangkah = () => {
 
         let temp = [...instruksi]
         temp.push({no: null, langkah: "", photo: ""})
+
+        setInstruksi(temp)
+    }
+
+    const onBtDeleteLangkah = (idx) => {
+
+        let temp = [...instruksi]
+
+        temp.splice(idx,1)
 
         setInstruksi(temp)
     }
@@ -37,8 +57,10 @@ const TambahResepPage = () => {
         if (bahan.length > 0) {
             return bahan.map((item,index) => {
                 return (
-                    <Input className='my-2' placeholder='2 siung bawang merah'
-                    onChange={(event) => handleBahan(event,index)}/>
+                    <div className="d-flex flex-row">
+                        <Input className='my-2' placeholder='2 siung bawang merah'
+                        onChange={(event) => handleBahan(event,index)}/>
+                    </div>
                 )
             })
         }
@@ -101,29 +123,30 @@ const TambahResepPage = () => {
                     position: "top-right",
                     autoClose: 5000
                     });
-                setBahan([""])
-                setInstruksi([{no: null, langkah: "", photo: ""}])
+                setBahan([])
+                setInstruksi([])
                 setResep({judul: "", deskripsi: "", kategori: "", porsi: "", kesulitan: "", lama: "",bahan: [],instruksi: [] ,photo: "" ,content: "" })
                 setTimeout(() => {
                     setpindah(true)
-                },500)  
+                },600)  
             }
         } catch (error) {
             console.log(error)
         }
+        
     }
     
     return (
         <div>
             {      
-                pindah == true && <Navigate  to="/resep-management"/>   
+                pindah && <Navigate  to="/resep-management"/>   
                 
             }
             <h1 className="text-center poppins my-3">Bagikan Resep Asik</h1>
             <div className="container">
                 <div className="row">
-                    <div className="col-8 offset-2 mb-3" style={{  borderRadius: "20px", backgroundColor: "#d2dae2"  }}>
-                        <div className="col-10 offset-1 p-3 my-3" style={{ borderRadius: "20px", backgroundColor: "#f5f6fa"  }}>
+                    <div className="col-8 offset-2 mb-3 shadow" style={{  borderRadius: "20px", backgroundColor: "#d2dae2"  }}>
+                        <div className="col-10 offset-1 p-3 my-3 shadow-sm" style={{ borderRadius: "20px", backgroundColor: "#f5f6fa"  }}>
                             <FormGroup>
                                 <Label>Judul Resep</Label>
                                 <Input placeholder='Judul resep' value={resep.judul}
@@ -165,31 +188,34 @@ const TambahResepPage = () => {
                             <FormGroup>
                                 <Label>Tipe Konten</Label>
                                 <Input type='select' onChange={(text) => setResep({...resep, content: text.target.value})}>
-                                    <option value="Gratis" selected>Gratis</option>
+                                    <option value="" selected={true}>Pilih Tipe</option>
+                                    <option value="Gratis">Gratis</option>
                                     <option value="Premium">Premium</option>
                                 </Input>
                             </FormGroup>
                         </div>
-                        <div className="col-10 offset-1 p-3 my-3" style={{ borderRadius: "20px", backgroundColor: "#f5f6fa"  }}>
+                        <div className="col-10 offset-1 p-3 my-3 shadow-sm" style={{ borderRadius: "20px", backgroundColor: "#f5f6fa"  }}>
                             <h3 className='poppsin'>Bahan-Bahan</h3>
                             <div className="p-3 my-3" style={{ borderRadius: "20px", backgroundColor: "#ced6e0"  }}>
                                 <FormGroup>      
                                          {printBahan()}
                                 </FormGroup>
-                                <div className='d-flex justify-content-end'>
-                                    <Button role={"button"} size='sm' color='primary' onClick={onBtAddBahan}>+ bahan</Button>
+                                <div className='d-flex justify-content-between'>
+                                    <Button role={"button"} size='sm' color='primary' onClick={onBtAddBahan}><BsPlusSquare size={"1.5vw"}/></Button>
+                                    <Button size="sm" color="danger" onClick={() => onBtDeleteBahan(bahan.length - 1)}><AiOutlineMinusSquare size="1.8vw"/></Button>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-10 offset-1 p-3 my-3" style={{ borderRadius: "20px", backgroundColor: "#f5f6fa"  }}>
+                        <div className="col-10 offset-1 p-3 my-3 shadow-sm" style={{ borderRadius: "20px", backgroundColor: "#f5f6fa"  }}>
                             <h3 className='poppsin'>Langkah</h3>
                             {printLangkah()}
-                            <div className='d-flex justify-content-end m-3'>
-                                <Button role={"button"} size='sm' color='primary' onClick={onBtAddLangkah}>+ Langkah</Button>
+                            <div className='d-flex justify-content-between m-3'>
+                                <Button role={"button"} size='sm' color='primary' onClick={onBtAddLangkah}><BsPlusSquare size={"1.5vw"}/></Button>
+                                <Button size="sm" color="danger" onClick={() => onBtDeleteLangkah(instruksi.length - 1)}><AiOutlineMinusSquare size="1.8vw"/></Button>
                             </div>
                         </div>
                         <div className='d-flex justify-content-end m-3'>
-                            <Button color='success' block={true} onClick={onBtSimpan}>Terbitkan</Button>
+                            <Button color='success' className='poppins shadow-sm' block={true} onClick={onBtSimpan}>Terbitkan</Button>
                         </div>
                     </div>
                 </div>

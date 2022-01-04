@@ -36,10 +36,6 @@
     transform: rotate(360deg);
   }
 }
-html, body
-{
-    height: 100%;
-}
 
 .poppins {
   font-family: 'Poppins', sans-serif;

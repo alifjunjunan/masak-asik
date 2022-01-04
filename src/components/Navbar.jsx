@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, Navigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
 import { Nav, NavItem, NavLink, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Button, Label, Spinner } from 'reactstrap'
 import { onLogin, onLogout, onRegist } from '../action'
@@ -31,45 +31,51 @@ const NavbarComponent = (props) => {
             ...inputRegist,
             role: "user",
             status: "active",
-            subcribes: "",
+            transaction: [],
+            subscribe: [],
             favorit: []
         }
 
-        if (inputRegist.password == konfirPass) {
-
-            if(inputRegist.email.includes('@') && inputRegist.email.includes('.')) {
-                
-                let res = await dispatch(onRegist(data))
+        if (inputRegist.email == "" || inputRegist.password == "" || konfirPass == "" ) {
+            toast.error("Isi Semua Data")
+        } else {
+            if (inputRegist.password == konfirPass) {
     
-                if (res.success) {
-    
-                    toast.success('SUCCESS! Akun Berhasil Di Buat', {
-                        position: "top-right",
-                        autoClose: 5000
-                        });
+                if(inputRegist.email.includes('@') && inputRegist.email.includes('.')) {
                     
-                    setModalOpenMasuk(false)
-
-                    setTimeout(() => {
-                        setModalInput("masuk")
-                        setInputRegist({email: "", username: "", password: ""})
-                        setKonfirPass("")
-                    },500)
+                    let res = await dispatch(onRegist(data))
+        
+                    if (res.success) {
+        
+                        toast.success('SUCCESS! Akun Berhasil Di Buat', {
+                            position: "top-right",
+                            autoClose: 5000
+                            });
+                        
+                        setModalOpenMasuk(false)
+    
+                        setTimeout(() => {
+                            setModalInput("masuk")
+                            setInputRegist({email: "", username: "", password: ""})
+                            setKonfirPass("")
+                        },500)
+                    }
+                } else  {
+                    
+                    toast.error('Masukan Email Yang Benar!', {
+                        position: "top-right",
+                        autoClose: 4000
+                        });
                 }
-            } else  {
-                
-                toast.error('Masukan Email Yang Benar!', {
+    
+            } else {
+    
+                toast.error('Password Tidak Sesuai!', {
                     position: "top-right",
                     autoClose: 4000
                     });
             }
-
-        } else {
-
-            toast.error('Password Tidak Sesuai!', {
-                position: "top-right",
-                autoClose: 4000
-                });
+            
         }
 
     }
@@ -110,9 +116,9 @@ const NavbarComponent = (props) => {
 
     }
 
-    const onBtLogout = () => {
+    const onBtLogout =  () => {
 
-        dispatch(onLogout())
+      dispatch(onLogout())
 
     }
 
@@ -154,7 +160,9 @@ const NavbarComponent = (props) => {
                                 <a href="#" className="nav-link active" aria-current="page">Artikel</a>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link">Premium</a>
+                                <Link to={"/premium"} className='text-decoration-none'>
+                                    <a href="#" className="nav-link">Premium</a>
+                                </Link>
                             </li>
                             {
                                 username 
@@ -167,7 +175,11 @@ const NavbarComponent = (props) => {
                                         <ul className="dropdown-menu " aria-labelledby="profileDropdown">
                                             <li><a href="#" className="dropdown-item">Profile</a></li>
                                             <li><a href="#" className="dropdown-item">Premium</a></li>
-                                            <li><a href="#" className="dropdown-item">History</a></li>
+                                            <li>
+                                                <Link to={"/transaksi"} className="dropdown-item">
+                                                     Transaksi
+                                                </Link>
+                                            </li>
                                             <li><a href="#" className="dropdown-item">Favorit</a></li>
                                             <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
                                         </ul>
@@ -178,13 +190,20 @@ const NavbarComponent = (props) => {
                                             </li>
                                             <li>
                                                 <Link to="/resep-management" className="dropdown-item">
-                                                     {/* <a href="#" className="dropdown-item">Resep Management</a> */}
                                                      Resep Management
                                                 </Link>
                                             </li>
-                                            <li><a href="#" className="dropdown-item">Artikel Management</a></li>
-                                            <li><a href="#" className="dropdown-item">Transaction Management</a></li>
-                                            <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
+                                            <li>
+                                                <Link to={"/artikel-management/"} className="dropdown-item">
+                                                    Artikel Management
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                 <Link to={"/transaksi-management"} className='dropdown-item'>
+                                                     Transaction Management
+                                                </Link>
+                                            </li>
+                                            <li><a role="submit" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
                                         </ul>
                                         }
                                     </div> 
@@ -214,9 +233,13 @@ const NavbarComponent = (props) => {
                                         <ul className="dropdown-menu " aria-labelledby="profileDropdown">
                                             <li><a href="#" className="dropdown-item">Profile</a></li>
                                             <li><a href="#" className="dropdown-item">Premium</a></li>
-                                            <li><a href="#" className="dropdown-item">History</a></li>
+                                            <li>
+                                                <Link to={"/transaksi"} className="dropdown-item">
+                                                     Transaksi
+                                                </Link>
+                                            </li>
                                             <li><a href="#" className="dropdown-item">Favorit</a></li>
-                                            <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
+                                            <li><a role="button" className="dropdown-item" type='submit' onClick={onBtLogout}>Logout</a></li>
                                         </ul>
                                         :
                                         <ul className="dropdown-menu" aria-labelledby="profileDropdown">
@@ -225,12 +248,19 @@ const NavbarComponent = (props) => {
                                             </li>
                                             <li>
                                                 <Link to="/resep-management" className="dropdown-item">
-                                                     {/* <a href="#" className="dropdown-item">Resep Management</a> */}
                                                      Resep Management
                                                 </Link>
                                             </li>
-                                            <li><a href="#" className="dropdown-item">Artikel Management</a></li>
-                                            <li><a href="#" className="dropdown-item">Transaction Management</a></li>
+                                            <li>
+                                                <Link to={"/artikel-management/"} className="dropdown-item">
+                                                    Artikel Management
+                                                </Link>
+                                            </li>
+                                            <li>
+                                                <Link to={"/transaksi-management"} className='dropdown-item'>
+                                                     Transaction Management
+                                                </Link>
+                                            </li>
                                             <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
                                         </ul>
                                         }
@@ -261,7 +291,7 @@ const NavbarComponent = (props) => {
                                                                 </FormGroup>
                                                             </div>
                                                             <div style={{ padding: "0 30%" }}>
-                                                                <Button color="success" outline style={{ width: "100%" }} onClick={onBtLogin}>Masuk</Button>
+                                                                <Button color="success"  outline style={{ width: "100%" }} onClick={onBtLogin}>Masuk</Button>
                                                             </div>
                                                         </Form>
                                                         <div style={{ marginTop: "2vh" }}>

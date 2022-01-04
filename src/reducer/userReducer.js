@@ -4,7 +4,8 @@ const INITIAL_STATE = {
     password: "",
     role: "",
     status: "",
-    subcribe: "",
+    transaction: [],
+    subscribe: [],
     favorit: []
 }
 
@@ -23,8 +24,18 @@ export const userReducer = (state=INITIAL_STATE, action) => {
             }
         case "LOGOUT_SUCCESS":
             return INITIAL_STATE
-            
-    
+
+        case "UPDATE_TRANSACTION_USER": 
+            return{
+                ...state,
+                transaction: action.payload
+            }
+        case "UPDATE_SUBSCRIBE_USER":
+            return {
+                ...state,
+                subscribe: action.payload
+            }
+        
         default:
             return state;
     }

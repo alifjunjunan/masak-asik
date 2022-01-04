@@ -2,7 +2,7 @@ import React from 'react'
 
 const FooterComponent = () => {
     return (
-        <div style={{ backgroundColor: "#328533", height: "100%"}}>
+        <div style={{ backgroundColor: "#328533"}}>
             <div className="container">
                 <ul className="nav justify-content-center">
                     <li className="nav-item"><a href="#" className="nav-link" style={{ color: "white" }}>Resep</a></li>

@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { Button } from 'reactstrap'
-import {FiEdit} from "react-icons/fi";
-import { BsInfoCircle } from "react-icons/bs";
+import {FiEdit,FiPlus,FiPlusSquare} from "react-icons/fi";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useDispatch } from 'react-redux';
-import { getResepAction } from '../action';
-import axios from 'axios';
-import { API_URL } from '../helper';
+import { deleteResepAction, getResepAction } from '../action';
+import { toast } from 'react-toastify';
+import { confirmAlert } from 'react-confirm-alert';
 
 const ResepManagementPage = () => {
 
@@ -16,22 +15,53 @@ const ResepManagementPage = () => {
 
     const [listresep,setListResep] = useState([])
 
+    const {dataResep} = useSelector((state) => {
+        return {
+            dataResep: state.resepReducer.listResep
+        }
+    })
+
 
     useEffect(() => {
-        getData()
+        dispatch(getResepAction())
     },[])
 
-    const getData = async() => {
-        
-       let res = await axios.get(`${API_URL}/resep`)
+    const confirmDelete = (id) => {
+        confirmAlert({
+            title: '',
+            message: 'Anda Yakin Ingin Menghapus ini?',
+            buttons: [
+                {
+                    label: 'Hapus',
+                    onClick: () => onBtDelete(id)
+                },
+                {
+                    label: 'Cancel'
+                }
+            ]
+        })
+    }
 
-       setListResep(res.data)
+    const onBtDelete = async(id) => {
 
+        try {
+            let res = await dispatch(deleteResepAction(id))
+
+            if (res.success) {
+                toast.success(`Data Berhasil Dihapus!`, {
+                    position: "top-right",
+                    autoClose: 5000
+                    });
+                dispatch(getResepAction())
+            }
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const printCardResep = () => {
 
-        return listresep.map((item,index) => {
+        return dataResep.map((item,index) => {
             return (
             <div className="col-12 col-md-5 m-2">
                 <div class="card">
@@ -52,8 +82,10 @@ const ResepManagementPage = () => {
                             {item.judul}
                         </h6>
                         <div className="d-flex justify-content-end">
-                            <Button  size='sm' outline color='info' className='mx-1'><FiEdit size="1.5vw"/></Button>
-                            <Button  size='sm' outline color='danger' className='mx-1'><RiDeleteBin6Line size="1.5vw"/></Button>
+                            <Link to={`/resep-management/detail/edit?id=${item.id}`}>
+                                <Button  size='sm' outline color='info' className='mx-1'><FiEdit size="1.5vw"/></Button>
+                            </Link>
+                            <Button  size='sm' outline color='danger' className='mx-1' onClick={() => confirmDelete(item.id)}><RiDeleteBin6Line size="1.5vw"/></Button>
                         </div>
                     </div>
                 </div>
@@ -70,7 +102,7 @@ const ResepManagementPage = () => {
                     <div className="col-10  col-md-6 rounded offset-md-3" style={{ backgroundColor: "#ecf0f1", height: "6.5vh" }}>
                         <div className="d-flex justify-content-between">
                             <Link to="/resep-management/add">
-                                <Button color='primary' size='sm' className='m-3 m-md-1'>Tambah</Button>
+                                <Button color='primary' size='sm' className='m-3 m-md-1 poppins'><FiPlusSquare size="1.5vw" className='mx-1'/>Resep</Button>
                             </Link>
                         </div>
                     </div>
@@ -86,13 +118,6 @@ const ResepManagementPage = () => {
                     </div>
                 </div>
                 <div className="col-12 col-md-9 d-flex flex-row flex-wrap justify-content-around">
-                    {/* <div className="col-12 col-md-5 m-2">
-                        <div class="card">
-                            <div class="card-body">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. A,  Voluptatem reprehenderit iste rerum.
-                            </div>
-                        </div>
-                    </div> */}
                     {printCardResep()}
                 </div>
             </div>
