@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'react-confirm-alert/src/react-confirm-alert.css';
@@ -22,6 +21,12 @@ import PremiumPage from './pages/PremiumPage';
 import BuyPremiumPage from './pages/BuyPremiumPage';
 import UserTransactionPage from './pages/UserTransactionPage';
 import ManagementTransactionPage from './pages/ManagementTransactionPage';
+import { getKategoriResepAction } from './action/kategoriResepAction';
+import KontenResepPage from './pages/KontenResepPage';
+import DetailKontenResepPage from './pages/DetailKontenResepPage';
+import CariKontenPage from './pages/CariKontenPage';
+import DetailKontenArtikelPage from './pages/DetailKontenArtikelPage'
+import KontenArtikelPage from './pages/KontenArtikelPage';
 
 const App = () => {
 
@@ -41,6 +46,7 @@ const App = () => {
     dispatch(getSubscribesAction())
     dispatch(getUserTransaction())
     dispatch(getUserTransaction())
+    dispatch(getKategoriResepAction())
   },[])
 
   const keepLogin = async () => {
@@ -67,6 +73,11 @@ const App = () => {
             <Route path="/" element={<HomePage/>}/>
             <Route path="/premium" element={<PremiumPage/>}/>
             <Route path="/premium/detail" element={<BuyPremiumPage/>}/>
+            <Route path="/resep-masakan" element={<KontenResepPage/>}/>
+            <Route path="/artikel-masak" element={<KontenArtikelPage/>}/>
+            <Route path='/resep' element={<DetailKontenResepPage/>}/>
+            <Route path='/resep/search' element={<CariKontenPage/>}/>
+            <Route path='/artikel' element={<DetailKontenArtikelPage/>} />
             
             {
               role == "admin"
@@ -79,12 +90,18 @@ const App = () => {
               <Route path="/artikel-management/add" element={<TambahArtikelPage/>}/>
               <Route path="/artikel-management/detail/edit" element={<DetailArtikelManagementPage/>}/>
               <Route path="/transaksi-management" element={<ManagementTransactionPage/>}/>
+              <Route path='/resep' element={<DetailKontenResepPage/>}/>
+              <Route path='/resep/search' element={<CariKontenPage/>}/>
+              <Route path='/artikel' element={<DetailKontenArtikelPage/>} />
               </>
               : 
                 role == "user"
                 ?
                 <>
                 <Route path="/transaksi" element={<UserTransactionPage/>}/>
+                <Route path='/resep' element={<DetailKontenResepPage/>}/>
+                <Route path='/resep/search' element={<CariKontenPage/>}/>
+                <Route path='/artikel' element={<DetailKontenArtikelPage/>} />
                 </>
                 :
                 <>
@@ -93,7 +110,7 @@ const App = () => {
             }
             <Route path="*" element={<HomePage/>}/>
         </Routes>
-        <FooterComponent/>
+        <FooterComponent />
     </div>
   )
 }

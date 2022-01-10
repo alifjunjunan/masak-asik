@@ -2,8 +2,8 @@ import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { API_URL } from '../helper'
 import { Button, FormGroup, Input, InputGroup, Label } from 'reactstrap'
-import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch, useSelector } from 'react-redux'
 import { updateResepAction } from '../action'
 import { toast } from 'react-toastify'
 import {TiArrowBackOutline} from 'react-icons/ti'
@@ -19,10 +19,18 @@ const DetailResepManagementPage = () => {
     const [btnColor,setBtnColor] = useState("primary")
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     useEffect(() => {
         getData()
     },[])
+
+    const {kategoriResep} = useSelector((state) => {
+        return{
+            kategoriResep: state.kategoriResepReducer.listKategoriResep
+        }
+    })
+
 
     const getData = async () => {
 
@@ -81,17 +89,29 @@ const DetailResepManagementPage = () => {
         }   
     }
 
+    const printKategori = () => {
+
+        if(kategoriResep.length > 0) {
+            return kategoriResep.map((item,index) => {
+                return (
+                    <option value={item.kategori}>{item.kategori}</option>
+                )
+            })
+        }
+    }
+
     const handleLangkah = (event,idx) => {
         let temp = [...instruksi]
+        temp[idx].no = idx+1
         temp[idx].langkah = event.target.value
 
-        setDetailResep({...detail, instruksi: temp})
+        setDetailResep({...detail, instruksi: temp, no: temp[idx].no = idx+1})
     }
 
     const handleLangkahPhoto = (event,idx) => {
         let temp = [...instruksi]
         temp[idx].photo = event.target.value
-
+        
         setDetailResep({...detail, instruksi: temp})
     }
 
@@ -191,8 +211,10 @@ const DetailResepManagementPage = () => {
                             </InputGroup>
                             <FormGroup>
                                 <Label>Kategori Resep</Label>
-                                <Input placeholder='Dessert' value={kategori} disabled={able}
-                                onChange={(text) => setDetailResep({...detail, kategori: text.target.value})}/>
+                                <Input type='select' placeholder='Dessert' value={kategori} disabled={able}
+                                onChange={(text) => setDetailResep({...detail, kategori: text.target.value})}>
+                                    {printKategori()}
+                                </Input>
                             </FormGroup>
                             <FormGroup>
                                 <Label>Tingkat Kesulitan</Label>
@@ -220,8 +242,8 @@ const DetailResepManagementPage = () => {
                                         {printBahan()}
                                 </FormGroup>
                                 <div className='d-flex justify-content-between'>
-                                    <Button size="sm" color="danger" disabled={able} onClick={() => onBtDeleteBahan(bahan.length - 1)}><AiOutlineMinusSquare size="1.8vw"/></Button>
                                     <Button role={"button"} size='sm' color='primary' disabled={able} onClick={onBtAddBahan}><BsPlusSquare size={"1.5vw"}/></Button>
+                                    <Button size="sm" color="danger" disabled={able} onClick={() => onBtDeleteBahan(bahan.length - 1)}><AiOutlineMinusSquare size="1.8vw"/></Button>
                                 </div>
                             </div>
                         </div>
@@ -229,8 +251,8 @@ const DetailResepManagementPage = () => {
                             <h3 className='poppsin'>Langkah</h3> 
                                 {printLangkah()}
                             <div className='d-flex justify-content-between m-3'>
-                                <Button size="sm" color="danger" disabled={able} onClick={() => onBtDeleteLangkah(instruksi.length - 1)}><AiOutlineMinusSquare size="1.8vw"/></Button>
                                 <Button role={"button"} size='sm' color='primary' disabled={able} onClick={onBtAddLangkah}><BsPlusSquare size={"1.5vw"}/></Button>
+                                <Button size="sm" color="danger" disabled={able} onClick={() => onBtDeleteLangkah(instruksi.length - 1)}><AiOutlineMinusSquare size="1.8vw"/></Button>
                             </div>
                         </div>
                         <div className='d-flex justify-content-between m-3'>

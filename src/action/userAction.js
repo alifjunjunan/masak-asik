@@ -17,7 +17,7 @@ export const onRegist = (data) => {
             return {success: true};
 
         } catch (error) {
-            console.log(error.response.data)
+            console.log(error)
         }
     }
 
@@ -41,7 +41,7 @@ export const onLogin = (data) => {
                 return {success: true}
             }
         } catch (error) {
-            console.log(error.response.data)
+            console.log(error)
         }
     }
 }
@@ -69,7 +69,7 @@ export const onKeepLogin = () => {
              }
             }
         } catch (error) {
-            console.log(error.response.data)
+            console.log(error)
         }
     }
 }

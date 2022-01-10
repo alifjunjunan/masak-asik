@@ -1,6 +1,7 @@
 import axios from 'axios'
 import { set } from 'draft-js/lib/EditorState'
 import React, { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
@@ -22,6 +23,11 @@ const DetailArtikelManagementPage = () => {
         getData()
     },[])
 
+    const {kategoriArtikel} = useSelector((state) => {
+        return {
+            kategoriArtikel: state.kategoriArtikelReducer.listKategoriArtikel
+        }
+      })
 
     const getData = async () => {
 
@@ -58,6 +64,19 @@ const DetailArtikelManagementPage = () => {
         }
     }
 
+    const printKategori = () => {
+
+        if(kategoriArtikel.length > 0) {
+            return kategoriArtikel.map((item,index) => {
+                return(
+                    <option value={item.kategori}>{item.kategori}</option>
+                )
+            })
+        }
+      }
+
+   
+
     return (
         <div>
             <h1 className="text-center poppins my-3">Detail Artikel</h1>
@@ -77,8 +96,10 @@ const DetailArtikelManagementPage = () => {
                             </FormGroup>
                             <FormGroup>
                                 <Label>Kategori</Label>
-                                <Input placeholder='Kategori' value={kategori} disabled={able}
-                                onChange={(text) => setDetail({...detail, kategori: text.target.value})}/>
+                                <Input type='select' placeholder='Kategori' value={kategori} disabled={able}
+                                onChange={(text) => setDetail({...detail, kategori: text.target.value})}>
+                                    {printKategori()}
+                                </Input>
                             </FormGroup>
                             <FormGroup>
                                 <Label>Photo Banner</Label>

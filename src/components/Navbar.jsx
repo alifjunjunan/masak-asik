@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { Link, Navigate } from 'react-router-dom'
 import { toast, ToastContainer } from 'react-toastify'
-import { Nav, NavItem, NavLink, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Button, Label, Spinner } from 'reactstrap'
-import { onLogin, onLogout, onRegist } from '../action'
+import { Nav, NavItem, NavLink, Modal, ModalHeader, ModalBody, Form, Input, FormGroup, Button, Label, Spinner, Badge } from 'reactstrap'
+import { getKategoriArtikelAction, getKategoriResepAction, getResepAction, onLogin, onLogout, onRegist } from '../action'
 
 const NavbarComponent = (props) => {
 
@@ -13,17 +13,28 @@ const NavbarComponent = (props) => {
     const [inputRegist, setInputRegist] = useState({email: "", username: "", password: ""})
     const [inputLogin, setInputLogin] = useState({email: "", password: ""})
     const [konfirPass, setKonfirPass] = useState("")
+    const [valueKategori, setValueKategori] = useState("")
 
     const dispatch = useDispatch()
 
-    const {iduser, username, role} = useSelector((state) => {
+    const {iduser, username, role, kategoriResep,kategoriArtikel, subs} = useSelector((state) => {
 
         return {
             iduser: state.userReducer.id,
             username: state.userReducer.username,
-            role: state.userReducer.role
+            role: state.userReducer.role,
+            subs: state.userReducer.subscribe,
+            kategoriResep: state.kategoriResepReducer.listKategoriResep,
+            kategoriArtikel: state.kategoriArtikelReducer.listKategoriArtikel
         }
     })
+
+    
+
+    useEffect(() => {
+        dispatch(getKategoriResepAction())
+        dispatch(getKategoriArtikelAction())
+    },[])
 
     const onBtRegist = async () => {
 
@@ -99,7 +110,7 @@ const NavbarComponent = (props) => {
                         position: "top-right",
                         autoClose: 5000
                         });
-
+                    
                     setModalOpenMasuk(false)
                     setInputLogin({email: "", password: ""})
                 }
@@ -116,9 +127,14 @@ const NavbarComponent = (props) => {
 
     }
 
-    const onBtLogout =  () => {
+    const onBtLogout = async () => {
 
-      dispatch(onLogout())
+      
+      let res = await dispatch(onLogout())
+
+      if(res.success){
+          window.location.assign('/')
+      }
 
     }
 
@@ -135,46 +151,109 @@ const NavbarComponent = (props) => {
        
     }
 
+    const printKategoriResepNav = () => {
+
+        return kategoriResep.map((item,index) => {
+            return (
+                <li>
+                    <Link to={`/resep-masakan?q=${item.link}`} state={kategoriResep[index]} className='dropdown-item poppins'>
+                        {item.kategori}  
+                    </Link>    
+                </li>
+            )
+        })
+    }
+    
+    const printKategoriArtikelNav = () => {
+
+        return kategoriArtikel.map((item,index) => {
+            return (
+                <li>
+                    <Link to={`/artikel-masak?q=${item.link}`} state={kategoriArtikel[index]} className='dropdown-item poppins'>
+                        {item.kategori}  
+                    </Link>    
+                </li>
+            )
+        })
+    }
+
+    const printBadge = () => {
+        if (subs.length > 0) {
+            let {detail} = subs[0]
+            let {paket} = detail[0]
+             return(
+                 <Badge color='warning'>{paket}</Badge>
+             )
+        }else {
+            return (
+                <></>
+            )
+        }
+    }
+
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-light">
                 <div className="container">
                     <ToastContainer />
-                    <a href="/" className="navbar-brand">Masak Asik</a>
+                    <a href="/" className="navbar-brand poppins">Masak Asik</a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                             <li className="nav-item dropdown">
-                                <a href="#" className="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Resep</a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a href="#" className="dropdown-item">dessert</a></li>
-                                    <li><a href="#" className="dropdown-item">Ayam</a></li>
-                                    <li><a href="#" className="dropdown-item">Daging</a></li>
-                                    <li><a href="#" className="dropdown-item">Sayuran</a></li>
-                                    <li><a href="#" className="dropdown-item">Seafood</a></li>
+                                <a href="#" className="nav-link dropdown-toggle poppins" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Resep</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown" style={{  padding: 0 }}>
+                                   {printKategoriResepNav()}
+                                </ul>
+                            </li>
+                            <li className="nav-item dropdown">
+                                <a href="#" className="nav-link dropdown-toggle poppins" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Artikel</a>
+                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown" style={{  padding: 0 }}>
+                                    {printKategoriArtikelNav()}
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a href="#" className="nav-link active" aria-current="page">Artikel</a>
-                            </li>
-                            <li className="nav-item">
-                                <Link to={"/premium"} className='text-decoration-none'>
+                                <Link to={"/premium"} className='text-decoration-none poppins'>
                                     <a href="#" className="nav-link">Premium</a>
                                 </Link>
                             </li>
                             {
+                                role == "admin"
+                                &&
+                                <li className="nav-item dropdown">
+                                    <a href="#" className="nav-link dropdown-toggle poppins" id="navbarDropdown" role="button" data-bs-toggle="dropdown">Management</a>
+                                    <ul className="dropdown-menu poppins" aria-labelledby="navbarDropdown">
+                                         <li>
+                                            <Link to="/resep-management" className="dropdown-item">
+                                                Resep
+                                            </Link>
+                                         </li>
+                                         <li>
+                                            <Link to={"/artikel-management/"} className="dropdown-item">
+                                                Artikel
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to={"/transaksi-management"} className='dropdown-item'>
+                                                Transaction 
+                                            </Link>
+                                        </li>
+                                    </ul>
+                                </li>
+                            }
+                            {
                                 username 
                                     ?
                                     <div className="dropdown d-lg-none">
-                                        <span class="badge rounded-pill bg-primary dropdown-toggle" id="profileDropdown" role="button" data-bs-toggle="dropdown" style={{ width: "80px"}}>{username}</span>
+                                        <span class="badge rounded-pill bg-primary dropdown-toggle poppins" id="profileDropdown" role="button" data-bs-toggle="dropdown" style={{ width: "80px"}}>{username}</span>
                                         {
                                             role == "user" 
                                             ?
                                         <ul className="dropdown-menu " aria-labelledby="profileDropdown">
                                             <li><a href="#" className="dropdown-item">Profile</a></li>
-                                            <li><a href="#" className="dropdown-item">Premium</a></li>
                                             <li>
                                                 <Link to={"/transaksi"} className="dropdown-item">
                                                      Transaksi
@@ -188,21 +267,6 @@ const NavbarComponent = (props) => {
                                             <li>
                                                 <a href="#" className="dropdown-item">Profile</a>
                                             </li>
-                                            <li>
-                                                <Link to="/resep-management" className="dropdown-item">
-                                                     Resep Management
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to={"/artikel-management/"} className="dropdown-item">
-                                                    Artikel Management
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                 <Link to={"/transaksi-management"} className='dropdown-item'>
-                                                     Transaction Management
-                                                </Link>
-                                            </li>
                                             <li><a role="submit" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
                                         </ul>
                                         }
@@ -212,10 +276,6 @@ const NavbarComponent = (props) => {
                             }
                         </ul>
                         <form action="" className="d-flex">
-                            <div className="input-group">
-                                <input type="text" className="form-control" placeholder="Telusuri di sini" />
-                                <button className="btn btn-outline-primary">cari</button>
-                            </div>
                             {
                                 props.delay
                                  ?
@@ -226,13 +286,12 @@ const NavbarComponent = (props) => {
                                  username 
                                     ?
                                     <div className="dropdown d-none d-lg-block m-2">
-                                        <span class="badge rounded-pill bg-primary dropdown-toggle" id="profileDropdown" role="button" data-bs-toggle="dropdown" style={{ width: "80px"}}>{username}</span>
+                                        <span class="badge rounded-pill bg-primary dropdown-toggle poppins" id="profileDropdown" role="button" data-bs-toggle="dropdown" style={{ width: "80px"}}>{username}</span>
                                         {
                                             role == "user" 
                                             ?
                                         <ul className="dropdown-menu " aria-labelledby="profileDropdown">
-                                            <li><a href="#" className="dropdown-item">Profile</a></li>
-                                            <li><a href="#" className="dropdown-item">Premium</a></li>
+                                            <li><a href="#" className="dropdown-item">Profile {printBadge()}</a></li>
                                             <li>
                                                 <Link to={"/transaksi"} className="dropdown-item">
                                                      Transaksi
@@ -245,21 +304,6 @@ const NavbarComponent = (props) => {
                                         <ul className="dropdown-menu" aria-labelledby="profileDropdown">
                                             <li>
                                                 <a href="#" className="dropdown-item">Profile</a>
-                                            </li>
-                                            <li>
-                                                <Link to="/resep-management" className="dropdown-item">
-                                                     Resep Management
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to={"/artikel-management/"} className="dropdown-item">
-                                                    Artikel Management
-                                                </Link>
-                                            </li>
-                                            <li>
-                                                <Link to={"/transaksi-management"} className='dropdown-item'>
-                                                     Transaction Management
-                                                </Link>
                                             </li>
                                             <li><a role="button" className="dropdown-item" onClick={onBtLogout}>Logout</a></li>
                                         </ul>

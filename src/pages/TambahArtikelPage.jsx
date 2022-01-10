@@ -4,12 +4,19 @@ import { useDispatch } from 'react-redux'
 import { addArtikelAction } from '../action'
 import { toast } from 'react-toastify'
 import { Navigate } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 
 const TambahArtikelPage = () => {
 
       const [artikel,setArtikel] = useState({judul: "", deskripsi: "",kategori: "", photo: "",date: ""})
       const [pindah,setPindah] =useState(false)
       const disptach = useDispatch()
+
+      const {kategoriArtikel} = useSelector((state) => {
+        return {
+            kategoriArtikel: state.kategoriArtikelReducer.listKategoriArtikel
+        }
+      })
 
   const onBtSimpan = async () => {
 
@@ -36,8 +43,20 @@ const TambahArtikelPage = () => {
           console.log(error)
       }
 
-      console.log(data)
+    
   }
+
+  const printKategori = () => {
+
+    if(kategoriArtikel.length > 0) {
+        return kategoriArtikel.map((item,index) => {
+            return(
+                <option value={item.kategori}>{item.kategori}</option>
+            )
+        })
+    }
+  }
+
     return (
         <div>
             {
@@ -58,7 +77,10 @@ const TambahArtikelPage = () => {
                             </FormGroup>
                             <FormGroup>
                                 <Label>Kategori</Label>
-                                <Input placeholder='Kategori' onChange={(text) => setArtikel({...artikel, kategori: text.target.value})}/>
+                                <Input placeholder='Kategori' type='select' onChange={(text) => setArtikel({...artikel, kategori: text.target.value})}>
+                                    <option value="">pilih Kategori</option>
+                                    {printKategori()}
+                                </Input>
                             </FormGroup>
                             <FormGroup>
                                 <Label>Photo Banner</Label>

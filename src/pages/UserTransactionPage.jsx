@@ -142,65 +142,67 @@ const UserTransactionPage = () => {
     const printHistory = () => {
 
         if (history.length > 0) {
-            if (history[0].status.includes("Terkonfirmasi")) {
+            if (history[0].status.includes("Terkonfirmasi") || history[0].status.includes("Dibatalkan")) {
                 return history.map((item,index) => {
                     const {harga,paket,durasi} = item.detail[0]
                     return (
-                        <div>
-                            <div className="row mt-3">
-                            <div className="col-12 d-flex flex-row" style={{ border: "2px solid white",borderTopRightRadius: "10px", borderTopLeftRadius: "10px", backgroundColor: "#f1f2f6" }}>
-                                <div className="col-3" style={{ borderRight: "3px solid white" }}>
-                                    <div className="p-2">
-                                        <h6 className="poppins">No.Tagihan:</h6>
-                                        <h5 className="poppins">{item.invoice}</h5>
-                                        <p className='poppins m-0'>{item.date}</p>
-                                    </div>
-                                </div>
-                                <div className="col-2" style={{ borderRight: "3px solid white" }}>
-                                    <div className="p-2">
-                                        <h6 className="poppins">Username:</h6>
-                                        <h5 className='poppins m-0'>{item.username}</h5>
-                                    </div>
-                                </div>
-                                <div className="col-2" style={{ borderRight: "3px solid white" }}>
-                                    <div className="p-2">
-                                        <h6 className="poppins">Total Pembayaran</h6>
-                                        <h5 className="poppins">Rp.{harga.toLocaleString()}</h5>
-                                    </div>
-                                </div>
-                                <div className="col-3">
-                                    <div className="p-2">
-                                        <h6 className="poppins">Status Tagihan:</h6>
-                                        <h5 className="poppins">{item.status}</h5>
-                                    </div>
-                                </div>
-                            </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12 d-flex flex-row"  style={{ border: "2px solid white", borderTop: "none", backgroundColor: "#f1f2f6", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}}>
-                                    <div className="col-2">
+                        <div style={{ height: "65vh" }}>
+                            <div>
+                                <div className="row mt-3">
+                                <div className="col-12 d-flex flex-row" style={{ border: "2px solid white",borderTopRightRadius: "10px", borderTopLeftRadius: "10px", backgroundColor: "#f1f2f6" }}>
+                                    <div className="col-3" style={{ borderRight: "3px solid white" }}>
                                         <div className="p-2">
-                                            <h6 className="poppins">Paket:</h6>
-                                            <h5 className="poppins">{paket}</h5>
+                                            <h6 className="poppins">No.Tagihan:</h6>
+                                            <h5 className="poppins">{item.invoice}</h5>
+                                            <p className='poppins m-0'>{item.date}</p>
                                         </div>
                                     </div>
-                                    <div className="col-2">
+                                    <div className="col-2" style={{ borderRight: "3px solid white" }}>
                                         <div className="p-2">
-                                            <h6 className="poppins">Durasi:</h6>
-                                            <h5 className="poppins">{durasi}</h5>
+                                            <h6 className="poppins">Username:</h6>
+                                            <h5 className='poppins m-0'>{item.username}</h5>
                                         </div>
                                     </div>
-                                    <div className="col-2">
+                                    <div className="col-2" style={{ borderRight: "3px solid white" }}>
                                         <div className="p-2">
-                                            <h6 className="poppins">Harga:</h6>
+                                            <h6 className="poppins">Total Pembayaran</h6>
                                             <h5 className="poppins">Rp.{harga.toLocaleString()}</h5>
                                         </div>
                                     </div>
+                                    <div className="col-3">
+                                        <div className="p-2">
+                                            <h6 className="poppins">Status Tagihan:</h6>
+                                            <h5 className="poppins">{item.status}</h5>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="row">
-                                <div className="col-12 d-flex justify-content-end" style={{ border: "2px solid white", borderTop: "none", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px", backgroundColor: "#f1f2f6"}}>
-                                    
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 d-flex flex-row"  style={{ border: "2px solid white", borderTop: "none", backgroundColor: "#f1f2f6", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px"}}>
+                                        <div className="col-2">
+                                            <div className="p-2">
+                                                <h6 className="poppins">Paket:</h6>
+                                                <h5 className="poppins">{paket}</h5>
+                                            </div>
+                                        </div>
+                                        <div className="col-2">
+                                            <div className="p-2">
+                                                <h6 className="poppins">Durasi:</h6>
+                                                <h5 className="poppins">{durasi}</h5>
+                                            </div>
+                                        </div>
+                                        <div className="col-2">
+                                            <div className="p-2">
+                                                <h6 className="poppins">Harga:</h6>
+                                                <h5 className="poppins">Rp.{harga.toLocaleString()}</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="row">
+                                    <div className="col-12 d-flex justify-content-end" style={{ border: "2px solid white", borderTop: "none", borderBottomLeftRadius: "10px", borderBottomRightRadius: "10px", backgroundColor: "#f1f2f6"}}>
+                                        
+                                    </div>
                                 </div>
                             </div>
                         </div>

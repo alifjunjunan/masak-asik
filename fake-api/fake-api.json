@@ -117,6 +117,88 @@
       ],
       "favorit": [],
       "id": 3
+    },
+    {
+      "email": "moms@gmail.com",
+      "username": "momsky",
+      "password": "12345",
+      "role": "user",
+      "status": "active",
+      "transaction": [],
+      "subscribe": [],
+      "favorit": [],
+      "id": 4
+    },
+    {
+      "email": "bima@gmail.com",
+      "username": "bima",
+      "password": "12345",
+      "role": "user",
+      "status": "active",
+      "transaction": [],
+      "subscribe": [
+        {
+          "iduser": 5,
+          "username": "bima",
+          "invoice": "#INV/1641742069956",
+          "date": "9/1/2022",
+          "totalPayment": 35000,
+          "detail": [
+            {
+              "paket": "Monthly",
+              "harga": 35000,
+              "durasi": "1 Bulan",
+              "penawaran": [
+                "Akses Semua Resep",
+                "Simpan resep Favoritmu",
+                "Beragam Artikel"
+              ],
+              "id": 2
+            }
+          ],
+          "status": "Terkonfirmasi",
+          "buktiTransaksi": "https://pbs.twimg.com/media/DqaB4FYU0AAN4xV.jpg",
+          "expired": "9/2/2022",
+          "id": 4
+        }
+      ],
+      "favorit": [],
+      "id": 5
+    },
+    {
+      "email": "windah@gmail.com",
+      "username": "windah",
+      "password": "12345",
+      "role": "user",
+      "status": "active",
+      "transaction": [],
+      "subscribe": [
+        {
+          "iduser": 6,
+          "username": "windah",
+          "invoice": "#INV/1641745109800",
+          "date": "9/1/2022",
+          "totalPayment": 10000,
+          "detail": [
+            {
+              "paket": "Weekly",
+              "harga": 10000,
+              "durasi": "1 Minggu",
+              "penawaran": [
+                "Akses Semua Resep",
+                "Simpan Resep Favoritmu"
+              ],
+              "id": 1
+            }
+          ],
+          "status": "Terkonfirmasi",
+          "buktiTransaksi": "https://storage.googleapis.com/support-forums-api/attachment/thread-21798375-9089804000950435710.jpg",
+          "expired": "16/1/2022",
+          "id": 6
+        }
+      ],
+      "favorit": [],
+      "id": 6
     }
   ],
   "productSubscribes": [
@@ -195,7 +277,7 @@
         }
       ],
       "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/09/resep-croffle-featured-780x440.jpg",
-      "content": "Gratis",
+      "content": "Premium",
       "id": 0
     },
     {
@@ -302,7 +384,7 @@
     {
       "judul": "Resep Mie Bakso, Hidangan Tepat Pembuka Musim Hujan",
       "deskripsi": "Musim hujan sudah mulai datang. Saat cuaca dingin, sajian berkuah hangat sangat cocok dihidangkan. Salah satu menu favorit adalah mie bakso! Tak perlu jauh-jauh cari tukang bakso, kita juga bisa kok mengolah resep mie bakso sendiri di rumah.\n\nMie bakso biasanya jadi favorit seluruh anggota keluarga, dari anak-anak hingga dewasa. Agar semua orang bisa menikmatinya, pisahkan sambal, daun bawang, daun seledri, dan merica. Setiap orang bisa meracik sesuai selera. Tentunya suasanya juga bertambah seru!\n\nPada resep mie bakso yang satu ini, kita menggunakan langkah-langkah yang sederhana. Khusus untuk para ibu yang tak punya banyak waktu, kamu bisa kok membeli bakso yang sudah jadi di supermarket atau beli langsung bakso siap pakai di tukang bakso langganan. Namun, jika punya waktu lebih, mengolah sendiri bola-bola bakso dari daging cincang juga lebih sehat, ini tips membuat bakso rumahan.\n\nRempah yang kita gunakan juga tak rumit untuk resep kuah bakso ini. Semua bumbunya mudah ditemukan. Salah satu rempah khas yang menjadi pembeda adalah bubuk pala. Sudah tak sabar ingin memasaknya? Yuk, kita langsung olah resep mie bakso satu ini!",
-      "kategori": "Daging",
+      "kategori": "Resep Daging",
       "porsi": "4 orang",
       "kesulitan": "Mudah",
       "lama": "40 menit",
@@ -335,6 +417,751 @@
       ],
       "photo": "https://www.masakapahariini.com/wp-content/uploads/2019/11/resep-mie-bakso-780x440.jpg",
       "content": "Gratis",
+      "id": 5
+    },
+    {
+      "judul": "Resep Ayam Saus Tiram Jamur Kancing, Menu Mudah yang Spesial",
+      "deskripsi": "Selain brokoli ataupun cumi dan udang, ternyata saus tiram juga dapat mudah diolah bersama protein hewani yang satu ini. Resep ayam saus tiram yang mudah dan cepat ini bakal jadi primadona baru di rumah. Cocok dipadukan dengan berbagai macam masakan rumahan lainnya, pastikan hidangan ini tersaji hari ini di meja makan!\n\nUntuk resep ayam saus tiram kali ini, aku rancang menjadi lebih praktis. Apakah itu? Kamu bisa menggunakan filet daging ayam sebagai bahan utamanya. Lebih mudah diolah dan lebih cepat proses memasaknya! Pastikan untuk menggunakan daging bagian paha agar lebih juicy saat dinikmati. Bagian dada memang lebih sehat karena minim lemak, namun agar lebih lezat, sekali-sekali tak apa menggunakan bagian yang lebih berlemak, bukan?\n\nSebagai sausnya kita bisa menggunakan Royco Saus Tiram dan sedikit Bango Kecap Manis. Perpaduan di antara keduanya menghasilkan rasa manis gurih yang akan meresap bersama ayam dan mengental berkat larutan tepung maizena. Sajikan selagi hangat bersama nasi dan lauk atapun sayur lainnya.",
+      "kategori": "Resep Ayam",
+      "porsi": "3 orang",
+      "kesulitan": "Mudah",
+      "lama": "30 menit",
+      "bahan": [
+        "500 g filet paha ayam, potong-potong",
+        "4 siung bawang putih, memarkan",
+        " 3 sdm Royco Saus Tiram",
+        "sdm Bango Kecap Manis ",
+        "½ sdt merica putih bubuk",
+        "1 sdt tepung maizena, larutkan dengan 2 sdm air",
+        "250 g jamur kancing, belah 2 bagian",
+        "3 cm jahe",
+        "3 buah cabai merah besar, iris serong",
+        "1 sdt garam",
+        "2 batang daun bawang",
+        "2 sdm margarin, untuk menumis"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Panaskan margarin, tumis bawang putih dan jahe hingga harum. Masukkan daging ayam, tumis hingga berubah warna. Tambahkan jamur dan cabai merah besar, aduk hingga layu.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2022/01/Ayam-Saus-Tiram-tumis-510x306.jpg"
+        },
+        {
+          "no": 2,
+          "langkah": "Masukkan Royco Saus Tiram, garam, merica, dan Bango Kecap Manis, aduk.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2022/01/Ayam-Saus-Tiram-saus-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Tambahkan daun bawang dan larutan maizena, masak hingga matang dan mengental. Angkat.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2022/01/Ayam-Saus-Tiram-kental-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Sajikan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2022/01/Ayam-Saus-Tiram-produk-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2022/01/Ayam-Saus-Tiram-siap-780x440.jpg",
+      "content": "Premium",
+      "id": 6
+    },
+    {
+      "judul": "Resep Es Buah Campur, Manis Segar Saat Berbuka Puasa",
+      "deskripsi": "\n\nEs Buah Campur adalah salah satu takjil segar yang populer di bulan puasa selain kolak pisang. Keduanya seringkali hadir di meja saji buka puasa sebagai pembuka iftar. Namun, tak ada yang saklek untuk bahan utama es buah di bulan puasa. Maka, momen Ramadan dimanfaatkan untuk menyajikan es campur dari buah-buahan yang identik di bulannya. Ya, apalagi kalau bukan blewah dan timun suri yang entah mengapa selalu saja musim.\nIsi es buah campur yang segar\n\nKali ini aku ingin memanfaatkan dua buah segar tersebut untuk menu es buah campur ini. Buah blewah dan timun suri memiliki kandungan air yang banyak seperti halnya semangka dan melon. Mengonsumsi buah yang mengandung banyak air sebagai pelepas dahaga memang baik untuk tubuh.\n\nResep praktis ini semakin enak saat dikombinasikan dengan Buavita Mango yang tak kalah menyegarkan. Kamu pun bisa berkreasi dengan menambahkan buah lain favoritmu. Misalnya perpaduan dari blewah, timun suri, stroberi, pepaya, atau tentu makin seru kalau kamu menambahkan bahan lain seperti nata de coco, cincau atau bahkan boba.\nTips menyajikan es buah campur\n\nBuah-buahan tentu akan lebih segar kalau didinginkan terlebih dahulu di dalam kulkas sebelum disajikan. Supaya tak tergesa-gesa, potong atau cetak buah sekitar 1-2 jam sebelum disajikan. Dinginkan dalam kulkas secara terpisah supaya cita rasanya tak tercampur. Aduk rata bersama bahan-bahan lainnya menjelang beduk tiba.\n\nEs buah campur juga mantap disajikan sebagai teman gorengan yang selalu hadir saat buka puasa!",
+      "kategori": "Dessert",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "15 menit",
+      "bahan": [
+        "150 g blewah",
+        "150 g nanas",
+        "150 g lidah buaya siap santap",
+        "150 g timun suri",
+        "150 g semangka",
+        "800 ml Buavita Mango"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Serut memanjang blewah. Sisihkan.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Serut memanjang timun suri, serut memanjang. Sisihkan.",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Cetak semangka menggunakan pengeruk buah bulat. Sisihkan.",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Masukkan semua bahan buah, lidah buaya, dan Buavita Mango ke dalam mangkuk besar. Siapkan gelas saji yang sudah diisi dengan es batu. Tuang campuran es buah ke dalam gelas saji. Sajikan dingin.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/04/shutterstock_1084926026-780x440.jpg",
+      "content": "Gratis",
+      "id": 7
+    },
+    {
+      "judul": "Resep No Bake Cookies Cheesecake, Buat Kamu yang Kangen Cake Mewah dari Café",
+      "deskripsi": "Di masa pandemi ini, tentu kita lebih sering menghabiskan waktu di rumah dan mengurangi kesempatan kita untuk mengunjugi café favorit. Namun, bukan berarti kita tidak bisa menghadirkan suasana ala café di rumah, bukan? Waktunya untuk mencoba berkreasi di rumah dengan resep yang satu ini – No Bake Cookies Cheesecake!\n\nSiapa yang tidak suka dengan legitnya cheesecake yang banyak dijajakan di coffee shop atau toko kue ternama di kota-kota besar? Teksturnya yang lembut dengan sensasi asin gurihnya keju, membuat kue ini selalu menjadi kudapan favorit sebagai teman minum kopi di berbagai cafe dan restoran kekinian. Jika biasanya kita sering melihat cheesecake dipadukan dengan beragam selai seperti stroberi atau blueberry, sekarang kudapan super lembut ini kita padukan dengan kepingan Oreo yang renyah dan tentunya es krim Wall’s Oreo Cookies & Cream Chocolate.\n\nPasti sudah tidak sabar untuk membuatnya, bukan? Yuk, langsung cek resepnya di bawah ini!",
+      "kategori": "Dessert",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "2 jam",
+      "bahan": [
+        "500 g cream cheese",
+        "250 ml heavy cooking cream",
+        "150 g Oreo, haluskan",
+        "60 g icing sugar",
+        "50 g Wall's Oreo Cookies & Cream Chocolate",
+        "Oreo, secukupnya",
+        "whipped cream"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Siapkan loyang kotak/bulat untuk wadah no bake cookies cheesecake dan membuat cookie crumble.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Panaskan butter lalu masukkan Oreo yang dihaluskan. Tuang dengan rata ke dalam wadah menggunakan bagian punggung sendok yang sudah disiapkan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/no-bake-cookies-cheesecake-butter-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Selanjutnya masukkan cream cheese dan gula ke dalam bowl dan Blender menggunakan hand blender hingga halus. Masukkan krim perlahan hingga padat.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/no-bake-cookies-cheesecake-blender-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Terakhir, masukkan Wall’s Oreo Cookies & Cream Chocolate dan Oreo yang sudah dihaluskan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/no-bake-cookies-cheesecake-es-krim-510x306.jpg"
+        },
+        {
+          "no": 5,
+          "langkah": "Tuang ke dalam sisi atas wadah yang sudah berisi cookie crumble. Simpan dalam kulkas minimal 6 jam atau semalam.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/no-bake-cookies-cheesecake-adonan-510x306.jpg"
+        },
+        {
+          "no": 6,
+          "langkah": "Sajikan dengan topping Oreo, whipped cream dan tambahan scoop Wall’s Cookies and Cream Chocolate.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/no-bake-cookies-cheesecake-siap-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/no-bake-cookies-cheesecake-disajikan-780x440.jpg",
+      "content": "Premium",
+      "id": 8,
+      "no": 6
+    },
+    {
+      "judul": "Resep Strawberry Parfait, Sajian Es Krim dengan Tampilan Menggoda",
+      "deskripsi": "Parfait awalnya adalah sebuah dessert dari Prancis yang terdiri dari krim, gula, telur, dan sirup. Tampil berlapis-lapis, parfait begitu menawan untuk dipandang dan rasanya begitu elegan. Namun versi modernnya tidak lagi seperti demikian. Esensi dessert dengan lapis-lapis bahan ini kemudian diinterpretasikan dengan menggunakan bahan-bahan yang berbeda.\n\nKali ini ada kombinasi antara buah stroberi segar, yogurt, granola, dan juga Wall’s Classic Vanilla! Dengan bahan dan cara membuat yang sangat praktis, kreasi menu yang satu ini bisa menjadi salah satu pilihan dessert keluarga selama pembatasan mobilitas. Paduan bahan-bahannya tak hanya menyegarkan, namun juga berimbang dan sehat.\n\nBagaimana kalau kita coba buat akhir pekan ini? Yuk, mari berkreasi!",
+      "kategori": "Dessert",
+      "porsi": "2 orang",
+      "kesulitan": "Mudah",
+      "lama": "30 menit",
+      "bahan": [
+        "1 cup stroberi, potong-potong",
+        "½ cup Greek yogurt ",
+        "1 sdt gula pasir",
+        "¼ cup granola",
+        "buah stroberi, iris",
+        "1 scoop Wall's Classic Vanilla Ice Cream"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Siapkan blender/food processor.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Masukkan stroberi dan gula halus, blender hingga tekstur agak sedikit halus",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/parfait-stroberi-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Siapkan stroberi yang sudah diiris dan masukkan ke dalam gelas atau mangkok.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/parfait-potongan-stroberi-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Setelah itu tuang lapis demi lapis dimulai dari stroberi yang sudah diblender kemudian Greek yogurt, ulangi sampai dua kali proses tuang.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/parfait-yogurt-510x306.jpg"
+        },
+        {
+          "no": 5,
+          "langkah": "Taburkan granola diatas Greek yogurt.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/parfait-granola-510x306.jpg"
+        },
+        {
+          "no": 6,
+          "langkah": "Terakhir, tambahkan 1 scoop Wall’s Classic Vanilla dan beri garnish berupa granola dan irisan stroberi, sajikan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/parfait-es-krim-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/parfait-siap-780x440.jpg",
+      "content": "Premium",
+      "id": 9,
+      "no": 6
+    },
+    {
+      "judul": "Resep Mocktail Lychee Mint Tea, Sajian a la Kafe di Rumah",
+      "deskripsi": "Di masa pandemi ini, kita belum bisa leluasa dine in di restoran ataupun di kafe. Namun, tak usah khawatir. Kita bisa, kok, membawa suasana a la kafe di rumah. Caranya adalah dengan menyajikan menu spesial seperti minuman mocktail. Kali ini, kita akan berbagi resep mudahnya!\n\nSemua orang sebenarnya bisa lho membuat mocktail di rumah. Pada dasarnya minuman ini berarti racikan sari buah yang dibuat dengan tambahan soda. Bedanya dengan cocktail, mocktail tidak menggunakan alkohol. Salah satu menu minuman spesial yang bisa kamu buat adalah mocktail lychee mint tea. Minuman segar ini terbuat dari bahan-bahan yang mudah ditemukan di supermarket terdekat, seperti lemon, daun mint, soda, dan tentu saja buah leci.\n\nRahasia kenikmatannya ada pada komposisinya. Untuk itu, kali ini kita menyajikan resep dengan takaran terbaik untuk mendapatkan rasa yang istimewa. Nah, keistimewaan minuman soda ini juga bergantung pada cara penyajiannya. Pastikan kamu menggunakan gelas kaca yang bisa menunjukkan warna serta gelembung soda yang indah.\n\nMinuman leci ini cocok disajikan sebagai dessert ataupun menemani camilan di sore hari. Sajian ini juga jadi ide yang seru saat ada tamu yang bertandang ke rumah. Tak usah pergi jauh ke kafe kan untuk mencoba minuman spesial?",
+      "kategori": "Dessert",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "15 menit",
+      "bahan": [
+        "550 ml Buavita Lychee",
+        "4 sdm air jeruk lemon",
+        "8 buah leci",
+        "es batu",
+        "250 ml air soda",
+        "20 lembar daun mint, sobek-sobek",
+        "2 buah kiwi hijau"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Kupas kiwi, potong 4 bagian, iris. Sisihkan.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Aduk rata Buavita Lychee, air jeruk lemon, jeruk lemon, dan daun mint. Tambahkan soda, aduk rata.",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Siapkan gelas saji yang sudah diisi dengan es batu, leci, dan kiwi. Tuang campuran Buavita Lychee ke dalam gelas saji, aduk. Sajikan.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/10/mocktail-leci-780x440.jpg",
+      "content": "Gratis",
+      "id": 10,
+      "no": 3
+    },
+    {
+      "judul": "Resep Tumis Ayam Kemangi, Menu Praktis Bagi yang Sibuk",
+      "deskripsi": "Proses memasak tumis ayam kemangi ini cenderung singkat dan mudah, cocok untuk kamu yang tak ingin berlama-lama di dapur. Resep daging ayam merupakan salah satu piihan menu yang bisa kamu sajikan karena mudah didapat dan gampang diolahnya. Apalagi jika menggunakan fillet daging ayam, proses masak semakin singkat karena potongan daging tanpa tulang cenderung lebih cepat matang.\n\nMaka dari itu, kamu bisa menggunakan fillet paha ayam jika ingin tekstur yang lebih lembut dan berlemak. Salah satu syarat membuat masakan tumisan sedap adalah saat bumbu dimasukkan, pastikan wajan benar-benar panas, tumis hingga harum.\n\nIngin tumis ayam kemangi pedas? Tambahkan potongan cabai rawit sesuai selera ke dalam tumisan daging ayam. Jangan lupa untuk memilih daun kemangi segar, ya!",
+      "kategori": "Resep Ayam",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "20 menit",
+      "bahan": [
+        "500 g fillet daging ayam, goreng hingga matang",
+        "5 butir bawang merah, iris",
+        "2 buah cabai merah, buang bijinya, iris tipis ",
+        "2 lembar daun salam",
+        "2 sdm Bango Kecap Manis",
+        "½ sdt merica putih bubuk",
+        "3 sdm minyak, untuk menumis",
+        "50 g kemangi, petiki daunnya",
+        "3 siung bawang putih, iris",
+        "1 cm lengkuas,memarkan",
+        "½ sdt ketumbar bubuk",
+        "½ sdt garam",
+        "100 ml air"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Panaskan minyak di atas wajan. Tumis bawang merah, bawang putih, cabai, lengkuas, dan daun salam hingga harum.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Masukkan ketumbar bubuk, Bango Kecap Manis, garam, dan merica. Aduk rata.",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Tambahkan ayam dan air. Masak hingga bumbu meresap. Masukkan daun kemangi, aduk rata. Angkat.",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Sajikan segera ditemani nasi putih.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2019/04/tumis_ayam_aroma_kemangi-780x440.jpg",
+      "content": "Gratis",
+      "id": 11,
+      "no": 4
+    },
+    {
+      "judul": "Resep Ayam Katsu Saus Kari ala Restoran Jepang",
+      "deskripsi": "Ayam katsu atau chicken katsu yang disiram dengan saus kari adalah salah satu menu favorit di restoran berkonsep kuliner Jepang. Saus kari yang disajikan bukanlah kari medok rempah seperti halnya bumbu kari versi Indonesia atau India, melainkan cita rasa khas kari gaya Jepang yang cenderung enteng dan bebas santan.\n\nMenurutku ayam katsu yang sempurna adalah daging ayam yang meski digoreng masih juicy dan tidak kering. Kemudian, lapisan luar dengan tepung panirnya tentu bertekstur garing. Demi mendapatkannya sebaiknya jangan terlalu lama menggoreng daging ayam supaya tidak kering. Begitu juga dengan api pada saat ayam katsu sedang digoreng jangan terlalu besar agar permukaannya tak gosong sebelum daging ayam matang.\n\nSupaya semakin enak dan sehat, kamu bisa menambahkan sayuran mentah segar sebagai pendamping menu ini. Potongan iceberg atau selada bokor pas banget menemani seporsi hidangan khas Jepang ini. Sajikan juga dengan Saus Sambal Jawara yang bikin kamu semakin berselera.\n",
+      "kategori": "Resep Ayam",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "40 menit",
+      "bahan": [
+        "4 filet paha ayam tanpa kulit, memarkan",
+        "1 sdt Royco Kaldu Ayam",
+        "1 sdt minyak wijen",
+        "2 butir telur ayam, kocok lepas",
+        "3 siung bawang putih, parut halus",
+        "½ sdm merica putih bubuk ",
+        "150 g tepung roti kasar atau tepung panko minyak, untuk menumis dan menggoreng"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Ayam Katsu: Lumuri ayam dengan bawang putih, merica, dan Royco Kaldu Ayam hingga merata. Diamkan hingga bumbu meresep selama sekitar 15 menit",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Lumuri daging ayam dengan tepung roti, lalu balur dengan telur kocok hingga merata. Lumuri kembali dengan tepung roti hingga permukaannya tertutup rata.",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Panaskan minyak, goreng ayam hingga matang dan cokelat keemasan. Angkat dan tiriskan. Sisihkan.",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Kari Jepang: Panaskan 2 sdm minyak, tumis bawang bombay dan bumbu kari hingga harum. Masukkan tepung terigu, aduk hingga rata. Tuang air, aduk rata.",
+          "photo": ""
+        },
+        {
+          "no": 5,
+          "langkah": "Masukkan kentang, wortel, merica, dan Royco Kaldu Ayam. Masak hingga sayuran matang. Tambahkan kacang polong, masak sebentar. Angkat.",
+          "photo": ""
+        },
+        {
+          "no": 6,
+          "langkah": "Sajikan ayam katsu bersama saus kari.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2020/06/Ayam-Katsu-780x440.jpg",
+      "content": "Gratis",
+      "id": 12
+    },
+    {
+      "judul": "Resep Misoa Goreng Jamur, Menu Sederhana Nan Lezat untuk Makan Siang",
+      "deskripsi": "Coba resep Misoa Goreng Ayam Jamur ini yang bisa kamu andalkan untuk makan siang istimewa di rumah. Sepiring misoa yang ditumis dengan potongan jamur hioko, filet ayam, dan daun bawang. Ada rasa gurih sekaligus manis dari Bango Kecap Manis di menu ini, hingga kamu tidak bisa menolak kelezatannya.\n\nMisoa merupakan salah satu jenis mi halus dan tipis yang terbuat dari tepung beras. Dari segi tekstur, misoa lebih lembut dibanding bihun. Namun, dari warna, misoa memiliki kemiripan warna seperti bihun. Misoa biasanya dijual dalam bentuk kering di pasaran. Sebelum diolah untuk berbagai masakan, misoa biasa direndam dalam air panas atau direbus sebentar terlebih dulu. Hidangan misoa identik dengan sajian di restoran Cina yang tersaji berkuah bersama ayam dan oyong.\n\nNamun, di resep kali ini, kita akan membuat misoa goreng yang terasa gurih sekaligus manis. Tidak serumit yang dibayangkan, kamu bisa mencobanya di rumah sebagai menu komplit. Ada protein hewani, protein nabati, maupun sayuran dalam sepiring misoa goreng. Selain lezat, menu ini cukup mengenyangkan, lho!\n\nSetelah menguasai resep misoa goreng ini, kamu bisa coba resep lain dari varian mi yang sama nikmatnya. Coba intip resep Misoa Kuah Jamur Udang dan resep Mi Lethek Goreng Khas Yogya",
+      "kategori": "Resep Ayam",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "50 menit",
+      "bahan": [
+        "300 g misoa kering",
+        "4 siung bawang putih, memarkan",
+        "2 buah cabai merah, potong serong",
+        "150 g jamur hioko kering, rendam dengan air panas, tiriskan, iris",
+        "1 L air, untuk merebus",
+        "2 cm jahe",
+        "150 g daging ayam filet, iris",
+        "2 batang daun bawang, potong 2 cm"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": " Didihkan air, rebus misoa selama 1-2 menit. Angkat dan tiriskan.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Aduk rata misoa bersama semua bahan bumbu termasuk Bango Kecap Manis. Sisihkan.",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Panaskan minyak, tumis bawang putih dan jahe hingga harum. Masukkan daging ayam, cabai merah, dan jamur, tumis hingga daging ayam matang",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Masukkan misoa, daun bawang, dan Royco Kaldu Jamur, aduk hingga tercampur rata. Angkat. Sajikan.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/01/shutterstock_753433183-780x440.jpg",
+      "content": "Gratis",
+      "id": 13
+    },
+    {
+      "judul": "Resep Nasi Ayam ala Mexico, Cita Rasanya Sungguh Unik",
+      "deskripsi": "Nasi Ayam a la Mexico, terdengar menarik dong. Rupanya tidak butuh terlalu banyak macam bahan ataupun proses masak yang njelimet. Ini adalah satu contoh resep yang mudah untuk dimasak sehari-hari!\n\nCaranya siapkan dahulu beras yang sudah dicuci bersih. Kemudian, tumis bawang bombay bersama saus tomat. Masak bersama beras dan tambahkan cabai hijau yang menjadi pengganti jalapenos ataupun habanero. Tambahkan kacang merah yang sudah matang dan juga dada ayam yang sudah dipotong-potong. Masak bersama air yang sudah dibumbui Royco Kaldu Ayam. Tunggu hingga matang dan Nasi Ayam a la Mexico siap untuk dinikmati.\n\nMasih banyak berbagai resep nasi lainnya yang kamu patut coba setelah yang satu ini. Siapkan untuk bulan Ramadan ini berupa Nasi Goreng Siram Laksa Ayam, Nasi Tutug Oncom, ataupun Nasi Goreng Crispy. Semakin seru, bukan?",
+      "kategori": "Resep Ayam",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "1 jam",
+      "bahan": [
+        "500 g beras",
+        "15 g saus tomat",
+        "15 g cabai hijau besar",
+        "1 potong dada ayam",
+        "50 g Royco Kaldu Ayam",
+        "15 g bawang putih",
+        "30 g bawang bombay",
+        "120 g kacang merah",
+        "3 sdt paprika bubuk"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Iris bawang bombay, lalu tumis hingga beraroma. Masukkan bawang putih cincang, tunggu sebentar hingga harum. Masukkan saus tomat dan dimasak hingga rata.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Kemudian masukkan beras yang telah dicuci dan aduk rata.",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Masukkan cabai hijau besar yang telah dipotong seukuran jari dan kacang merah matang. Letakkan ayam dada yang telah dibalur oleh bubuk paprika di atas beras tersebut.",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Masukkan air yang telah dicampur dengan Royco Kaldu Ayam seperlunya untuk memasak nasi. Sajikan setelah matang.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2019/04/nasi-ayam-a-la-mexico-750x440.jpg",
+      "content": "Gratis",
+      "id": 15
+    },
+    {
+      "judul": "Resep Fried Ice Cream, Dessert Spesial untuk Temani Sore Harimu",
+      "deskripsi": "Pernah terbayangkan sebelumnya untuk mencicipi fried ice cream atau es krim goreng? Atau pernahkah kamu berpikir bagaimana cara menggoreng es krim agar tidak meleleh? Nah, resep ini cocok untukmu yang kreatif dan eksploratif soal urusan dapur!\n\nMeski sudah ada sejak lama, popularitas fried ice cream rasanya tak kunjung surut. Rasanya yang lezat dan cara penyajiannya yang unik membuat dessert yang satu ini senantiasa digadang-gadang oleh mereka yang menggemari makanan manis. Fried ice cream sendiri dibuat dengan cara menggoreng es krim yang sudah terlebih dahulu dibungkus oleh roti. Hasilnya adalah sensasi rasa unik karena memadukan renyahnya roti yang digoreng dan dinginnya es krim. Tentunya, rasanya akan makin spesial karena es krim yang akan kita gunakan adalah Wall’s Strawberry Cheesecake Ice Cream dengan potongan keju dan saus stroberi yang segar!\n\nSaat membuat dessert ini, pastikan bahwa bulatan es krim yang berbalut roti tawar telah terbungkus rapat. Hal ini dapat mencegah es krim meleleh saat digoreng. Yuk, kita ke dapur!",
+      "kategori": "Dessert",
+      "porsi": "4 orang",
+      "kesulitan": "Cukup Rumit",
+      "lama": "1 jam",
+      "bahan": [
+        "4 scoop Wall's Strawberry Cheesecake Ice Cream",
+        "1 butir telur",
+        "100 gr corn flakes, hancurkan",
+        "2 lembar roti tawar",
+        "50 ml susu cair",
+        "200 ml minyak untuk menggoreng"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Potong pinggiran roti tawar, kemudian pipihkan dengan rolling pin.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/06/fried-ice-cream-step-1_edited-510x306.jpg"
+        },
+        {
+          "no": 2,
+          "langkah": "Tuang 2 scoop Wall’s Strawberry Cheesecake Ice Cream, lalu bentuk menjadi bola dan bungkus dengan plastic wrap. Bekukan dalam freezer.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/06/fried-ice-cream-step-2_edited-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Campurkan telur dan susu, kocok lepas.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/06/fried-ice-cream-step-3_edited-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Celupkan bola es krim ke dalam campuran telur, kemudian salut dengan corn flakes yang sudah dihancurkan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/06/fried-ice-cream-step-4_edited-510x306.jpg"
+        },
+        {
+          "no": 5,
+          "langkah": "Goreng es krim dalam minyak panas di atas api sedang. Setelah keemasan, tiriskan, sajikan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/06/fried-ice-cream-step-5_edited-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/06/fried-ice-cream-dish_edited-780x440.jpg",
+      "content": "Premium",
+      "id": 16
+    },
+    {
+      "judul": "Resep Guava Freakshake, Minuman Segar untuk Teman di Rumah Aja",
+      "deskripsi": "Di masa pembatasan mobilitas, tentu penting bagi kita dan keluarga untuk selalu menjaga kesehatan. Salah satunya adalah dengan mengonsumsi minuman yang sehat! Konsumsi vitamin C dari buah jambu menjadi salah satu satu cara yang dapat membantu meningkatkan daya tahan. Menikmati Buavita Guava adalah cara mudah bagi kita untuk memenuhi kebutuhan vitamin C harian. Karena keseharian kita di rumah, waktunya untuk mencoba berkreasi dengan resep Guava Freakshake yang satu ini.\n\nUntuk membuatnya, gunakan Buavita Guava dan es krim Wall’s Extra Creamy Classic Vanilla! Mengapa dinamakan freakshake, karena merupakan milkshake yang dikreasikan dengan topping saus cokelat dan marshmallow. Rasanya yang segar dan creamy pasti bikin bawaannya ingin tambah terus dan hati senang!\n\nYuk, langsung bikin aja minuman ini di rumah!\n",
+      "kategori": "Dessert",
+      "porsi": "2 orang",
+      "kesulitan": "Mudah",
+      "lama": "30 menit",
+      "bahan": [
+        "200 ml susu",
+        "3 scoop Wall's Classic Vanilla Ice Cream",
+        "200 ml Buavita Guava",
+        "secukupnya Wall's Classic Vanilla Ice Cream",
+        "marshmallow, secukupnya",
+        "chocolate sauce, secukupnya"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Siapkan blender, kemudian masukkan es batu secukupnya.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/guava-freakshake-es-510x306.jpg"
+        },
+        {
+          "no": 2,
+          "langkah": "Lalu tuang susu dan Buavita Guava ke dalam blender.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/guava-freakshake-buavita-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Tambahkan 3 scoop Wall’s Classic Vanilla, lalu blender hingga tercampur rata.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/guava-freakshake-es-krim-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Tuang milkshake ke dalam gelas saji.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/guava-freakshake-blender-510x306.jpg"
+        },
+        {
+          "no": 5,
+          "langkah": "Kemudian beri topping sesuai selera. Sajikan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/guava-freakshake-topping-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/guava-freakshake-siap-780x440.jpg",
+      "content": "Premium",
+      "id": 17
+    },
+    {
+      "judul": "Resep Nasi Goreng Rendang Ayam Crispy, Santap Malam Jadi Lebih Menyenangkan",
+      "deskripsi": "Nasi goreng dengan varian apa lagi kali ini yang seru untuk dicoba? Nah, ada satu nih yang ingin aku bagi resepnya. Adalah nasi goreng rendang ayam crispy, perpaduan dua dunia yang ternyata begitu harmonis! Bayangkan daging ayam gurih dan renyah yang dipadukan dengan nasi goreng bercita rasa rendang yang kaya rasa sekaligus pedas. Seru!\n\nIde menikmati nasi goreng ini cocok untuk kapanpun, khususnya di malam hari. Maklum memang orang Indonesia lebih hobi makan nasi goreng di malam hari. Maka dari itu, cita rasa rendang tentu akan terasa lebih cocok. Namun agar tidak sepi, kehadiran ayam crispy pasti akan menjadikannya lebih meriah.\n\nSo, tunggu apa lagi? Siapkan bahan-bahannya dan langsung deh kita ke dapur sekarang. Selamat memasak nasi goreng rendang ayam crispy-nya ya teman-teman!",
+      "kategori": "Resep Ayam",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "45 menit",
+      "bahan": [
+        "3 siung bawang putih, cincang",
+        "1.5 sdm margarin",
+        "2 buah wortel, potong kecil ",
+        "1.5 sdm air",
+        "5 butir bawang merah, cincang",
+        "1 buah cabai merah, buang biji dan potong dadu",
+        "300 g nasi putih",
+        "1 bungkus Royco Bumbu Siap Pakai Nasi Goreng Rendang",
+        "100 g daging ayam, potong dadu",
+        "400 ml minyak sayur"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Membuat ayam crispy: Campurkan semua bahan tepung ayam ke dalam mangkuk. Lalu, bagi menjadi 2 bagian di dalam mangkuk yang berbeda.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-2-510x306.jpg"
+        },
+        {
+          "no": 2,
+          "langkah": "Tuangkan air ke dalam salah satu mangkuk untuk membuat tepung basah. Aduk rata hingga licin.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-3-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Baluri daging ayam dengan tepung kering, lalu masukkan ke tepung basah. Lakukan langkah ini hingga semua ayam telah tersalut tepung.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-4-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Panaskan margarin di dalam wajan. Masukkan bawang putih dan bawang merah, tumis hingga harum.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-6-510x306.jpg"
+        },
+        {
+          "no": 5,
+          "langkah": "Masukkan potongan wortel dan cabai merah, kemudian masak hingga matang.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-7-510x306.jpg"
+        },
+        {
+          "no": 6,
+          "langkah": "Tambahkan potongan daging ayam crispy lalu masak hingga matang.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-8-510x306.jpg"
+        },
+        {
+          "no": 7,
+          "langkah": "Masukkan nasi putih lalu masak selama 1 menit. Masukkan Royco Bumbu Siap Pakai Nasi Goreng Rendang dan sedikit air, kemudian aduk hingga rata. Masak selama 2-3 menit, lalu angkat dan sajikan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-9-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/09/nasi-goreng-rendang-ayam-crispy-MAHI-1-400x240.jpg",
+      "content": "Premium",
+      "id": 18
+    },
+    {
+      "judul": "Resep Ayam Sioh Tauco, Manis Gurih Sajian Khas Peranakan",
+      "deskripsi": "Resep Ayam Sioh Tauco adalah masakan khas Peranakan yang kelezatannya sudah duluan melegenda di Malaysia hingga kini mulai dikenal di Indonesia. Tentunya, masakan Peranakan selalu punya tempat khusus di hati orang Indonesia.\n\nMeski terlahir sebagai orang Indonesia, aku tidak pernah membatasi eksplorasi kuliner hanya di ranah negeri sendiri saja. Kalau kamu perhatikan dengan seksama, kuliner milik negara tetangga biasanya memiliki kemiripan dengan kuliner Indonesia. Misalnya di Italia ada spaghetti, di Jepang ada ramen, dan di Indonesia ada bakmi. Setiap negara pasti punya interpretasinya masing-masing. Resep Ayam Sioh Tauco ini merupakan interpretasi kuliner Melayu dan Tionghoa yang kita kenal dengan istilah Peranakan. Inilah yang menjadikan kuliner Asia Tenggara lebih berwarna dan unik.\n\nKenapa disebut sebagai masakan Nyonya Peranakan? Pada zaman dulu, ‘Nyonya’ adalah panggilan kehormatan untuk para istri-istri keturunan Tionghoa. Para Nyonya ini kemudian dikenal akan masakan rumahan mereka yang lezat. Gaya masakannya sendiri terbagi dua, Nyonya Peranakan Penang dan Nyonya Peranakan Malaka. Yang membedakan keduanya adalah cita rasa dari masing-masing masakan. Kalau masakan Nyonya Peranakan Penang cenderung asam pedas, masakan Nyonya Peranakan Malaka lebih didominasi oleh paduan rempah-rempah.\n\nKalau kamu bertanya pada orang Malaysia apakah mereka familiar dengan ayam sioh, pasti mereka akan mengiyakan dengan antusias. Makanan ini dikenal sebagai masakan olahan ayam yang menggunakan paduan asam jawa dan ketumbar pada bumbunya. Penambahan tauco-lah yang menjadikan citra Peranakannya menjadi kental.\n\nCita rasanya cukup unik lho! Ketumbar yang dikombinasikan dengan asam jawa, tauco, dan kecap manis bisa menyelaraskan rasa dari seluruh hidangan. Di dalam satu sendok suapan ayam sioh tauco ini tersembunyi rasa manis, asam, dan gurih. Karena diperlukan waktu yang cukup lama untuk membuat daging ayam empuk, sebaiknya kamu tidak dalam keadaan terburu-buru saat memasak menu ini. Sisihkan waktu setidaknya satu setengah jam agar masakan kamu maksimal enaknya. Hidangkan untuk berbuka puasa agar semuanya lebih istimewa. Keluargamu pasti penasaran dengan masakan yang satu ini!",
+      "kategori": "Resep Ayam",
+      "porsi": "4 orang",
+      "kesulitan": "Cukup Rumit",
+      "lama": "1 jam",
+      "bahan": [
+        "2 ekor ayam, potong 12 bagian",
+        "10 sdm tauco",
+        "3 sdm air asam jawa",
+        " 2 sdt Royco Kaldu Ayam",
+        "4 sdt garam",
+        "20 butir bawang merah, haluskan",
+        "3 sdm ketumbar butiran, haluskan",
+        "5 sdm Bango Kecap Manis",
+        "6 sdm gula",
+        "500 ml air"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Tumis bawang merah hingga harum. Kemudian masukkan tauco dan ayam. Masak hingga ayam berubah warna.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/05/SS-AYAM-BUMBU-TAUCO-STEP-2-copy-510x306.jpg"
+        },
+        {
+          "no": 2,
+          "langkah": "ambahkan Bango Kecap Manis dan ketumbar. Aduk rata.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/05/SS-AYAM-BUMBU-TAUCO-STEP-4-copy-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Tambahkan air asam jawa dan bubuhi gula, garam, serta Royco Kaldu Ayam. Aduk rata.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/05/SS-AYAM-BUMBU-TAUCO-STEP-5-copy-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Tambahkan air dan masak hingga ayam empuk dan kuah mengental. Ayam Sioh Tauco siap disajikan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/05/SS-AYAM-BUMBU-TAUCO-STEP-6-copy-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/05/SS-AYAM-BUMBU-TAUCO-STEP-7b-copy-400x240.jpg",
+      "content": "Premium",
+      "id": 19
+    },
+    {
+      "judul": "Resep Sup Ayam Tomat, Sup Hangat Favorit Keluarga",
+      "deskripsi": "",
+      "kategori": "Resep Ayam",
+      "porsi": "4 orang",
+      "kesulitan": "Mudah",
+      "lama": "50 menit",
+      "bahan": [
+        "5 buah tomat, rebus, kupas, haluskan",
+        "1 buah wortel, potong kotak",
+        "4 butir bawang merah",
+        " 1 sdm Bango Kecap Manis",
+        "¼ sdt merica bubuk",
+        "1750 ml kaldu ayam",
+        "2 fillet paha ayam",
+        "75 g buncis, potong 1 cm",
+        "5 sdm saus tomat ",
+        "1 sdm garam",
+        "1 sdt gula pasir",
+        "1 sdm minyak goreng"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Panaskan minyak. Tumis bawang merah sampai harum. Tambahkan kaldu ayam. Biarkan hingga mendidih.",
+          "photo": ""
+        },
+        {
+          "no": 2,
+          "langkah": "Masukkan  tomat halus, saus tomat, Bango Kecap Manis, garam, merica bubuk, dan gula pasir. Aduk sampai mendidih",
+          "photo": ""
+        },
+        {
+          "no": 3,
+          "langkah": "Masukkan wortel dan buncis. Biarkan setengah matang. Tambahkan ayam, masak hingga matang. Angkat.",
+          "photo": ""
+        },
+        {
+          "no": 4,
+          "langkah": "Sajikan hangat.",
+          "photo": ""
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2019/03/Sup-tomat-daging-620x440.jpg",
+      "content": "Gratis",
+      "id": 20
+    },
+    {
+      "judul": "Resep Banana Pudding, Sebuah Hidangan Penutup ",
+      "deskripsi": "Bagi para penggemar kuliner, tentu perpaduan rasa cokelat dan keju bukanlah hal yang asing lagi. Seperti yang kita tahu, pisang merupakan salah satu buah paling favorit di Indonesia, sedangkan cokelat adalah rasa yang selalu ada hampir di semua jenis dessert. Jadi tidak mengagetkan lagi jika dua sejoli ini bertemu kembali dalam bentuk banana pudding dengan paduan es krim cokelat yang lumer di mulut.\n\nMeskipun sosoknya tergolong mewah, sesungguhnya hidangan pencuci mulut yang satu ini dibuat dengan bahan yang simpel. Mudah pula ditemukan di minimarket terdekat. Kamu dapat membuatnya dengan mengkombinasikan buah pisang, custard atau vla instan, susu segar, biskuit, dan es krim Wall’s Chocolate Deluxe. Hasil akhirnya adalah dessert yang kaya akan rasa dan berpenampilan mewah, terlebih lagi campuran dari es krim Wall’s Chocolate Deluxe akan memberikan rasa cokelat yang pekat dan nikmat. Semarakkan suasana berbuka puasa dengan menyajikannya sebagai hidangan buka di bulan Ramadhan!\n\nPenasaran dengan cara membuatnya? Tenang saja, karena kamu dapat membuatnya dalam kurang dari satu jam saja. Awali dengan mengocok bubuk vla dengan susu cair hingga sedikit mengental. Kemudian, tata pisang yang telah diiris di bagian dasar wadah. Setelah tersusun rapi, masukkan Wall’s Chocolate Deluxe dan campurkan dengan adonan vla sambil menaburkan potongan pisang disela-sela tuangan. Untuk sentuhan terakhir, hias banana pudding dengan whipped cream dan remahan biskuit secukupnya. Jangan lupa untuk menyajikannya selagi dingin untuk kelezatan yang maksimal.\n\nBila kamu adalah salah satu dari begitu banyak pencinta cokelat-pisang, tentu jangan sampai ketinggalan untuk mencoba resep banana pudding yang satu ini. Yuk, daripada menunggu lama, langsung saja kita singsingkan lengan baju dan bergegas ke dapur sekarang!\n",
+      "kategori": "Dessert",
+      "porsi": "2 orang",
+      "kesulitan": "Mudah",
+      "lama": "30 menit",
+      "bahan": [
+        "3 scoop Wall's Chocolate Deluxe Ice Cream",
+        " 500 ml fresh milk/susu UHT rasa plain dingin (boleh digantikan dengan 500 ml air dingin)",
+        "1 buah pisang, potong tipis",
+        "biskuit, secukupnya",
+        "whipped cream, secukupnya"
+      ],
+      "instruksi": [
+        {
+          "no": 1,
+          "langkah": "Kocok bubuk vla dengan susu cair hingga sedikit mengental dan tidak ada gumpalan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/04/banana-pudding-step-1-510x306.jpg"
+        },
+        {
+          "no": 2,
+          "langkah": "Tata biskuit dan potongan pisang di dalam dasar wadah.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/04/banana-pudding-step-2-510x306.jpg"
+        },
+        {
+          "no": 3,
+          "langkah": "Masukkan Wall’s Chocolate Deluxe ke dalam wadah, lalu campurkan dengan vla.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/04/banana-pudding-step-3-510x306.jpg"
+        },
+        {
+          "no": 4,
+          "langkah": "Tambahkan dengan potongan pisang.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/04/banana-pudding-step-4-510x306.jpg"
+        },
+        {
+          "no": 5,
+          "langkah": "Beri whipped cream dan remahan biskuit. Sajikan.",
+          "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/04/banana-pudding-step-5-510x306.jpg"
+        }
+      ],
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/04/COVER-4-min-780x440.jpg",
+      "content": "Premium",
+      "id": 21
+    }
+  ],
+  "kategoriResep": [
+    {
+      "kategori": "Dessert",
+      "photo": "https://image.freepik.com/free-photo/closeup-shot-delicious-cream-puff-with-strawberries-wooden-table_181624-22715.jpg",
+      "text": "Ragam resep dessert lezat favorit keluarga. Camilan manis, minuman segar hingga kreasi es krim.",
+      "link": "dessert",
+      "id": 1
+    },
+    {
+      "kategori": "Resep Ayam",
+      "photo": "https://image.freepik.com/free-photo/grilled-chicken-legs-flaming-grill-with-grilled-vegetables-with-tomatoes-potatoes-pepper-seeds-salt_1150-37782.jpg",
+      "text": "Mencari resep ayam yang praktis tapi tetap istimewa untuk keluarga? Berikut adalah pilihan resep terbaik untukmu. Yuk, kita coba!",
+      "link": "ayam",
+      "id": 2
+    },
+    {
+      "kategori": "Resep Daging",
+      "photo": "https://image.freepik.com/free-photo/grilled-beef-steak-dark-wooden-surface_1150-44344.jpg",
+      "text": "Sajikan olahan daging yang menggoyang lidah! Mulai dari rendang yang rasanya nendang hingga sop iga yang istimewa, semua ada di sini",
+      "link": "daging",
+      "id": 3
+    },
+    {
+      "kategori": "Resep Sayuran",
+      "photo": "https://image.freepik.com/free-photo/diet-menu-healthy-salad-fresh-vegetables-tomatoes-egg-onion-healthy-meal-concept_1150-37839.jpg",
+      "text": "emukan berbagai resep sayuran yang sehat dan lezat di sini. Mulai dari resep tumis buncis, kangkung, hingga sayur asem ataupun sop yang wajib jadi masakan harian di rumah!",
+      "link": "sayuran",
+      "id": 4
+    },
+    {
+      "kategori": "Seafood",
+      "photo": "https://image.freepik.com/free-photo/tasty-spanish-paella-with-seafood_1205-8949.jpg",
+      "text": "Warnai meja makanmu dengan resep seafood pilihan ini. Rasanya lezat, dan mudah dibuat. Cumi asam manis hingga sate udang jadi makin spesial!",
+      "link": "seafod",
       "id": 5
     }
   ],
@@ -379,8 +1206,8 @@
       "id": 3
     },
     {
-      "judul": "Cara Masak Telur Setengah Matang a la Restoran",
-      "deskripsi": "",
+      "judul": "Cara Masak Telur Setengah Matang ala Restoran",
+      "deskripsi": "Ingin tahu cara buat telur separuh masak matang a la restoran? Telur yang sejatinya merupakan protein paling murah ini bisa tampil dengan begitu eloknya. Selain rasanya yang lezat, soft-boiled egg bisa dipadu padankan dengan begitu banyak resep.\n\nAwalnya, telur separuh masak ini merupakan elemen vital dari masakan ramen khas Jepang ataupun beragam masakan brunch dari Barat. Bayangkan telur yang bagian putihnya sudah matang namun kuningnya masih separuh leleh. Sungguh tersaji menggiurkan dan mengundang selera! Nah, mau tahu cara merebus telur setengah matang yang benar?\n\nItulah mengapa perlu bagi kita-kita yang hobi di dapur agar mengetahui cara buat telur separuh masak ini. Yuk, kita simak langkah-langkah cara merebus telur setengah matang berikut ini:\n\n    Siapkan panci berisi air dan didihkan dengan menggunakan api sedang.\n    Setelah mendidih, perlahan masukkan telur satu per satu dengan menggunakan sendok berongga. Mungkin kamu masih penasaran telur setengah matang berapa menit kira-kira waktu yang pas? Masak hanya selama 6 1/2 menit, tidak lebih dan tidak kurang.\n    Tetapi sebelum itu, siapkan semangkuk berisikan air es atau dipenuhi es batu. Setelah mencapai 6 1/2 menit, segera pindahkan telur ke dalam mangkuk ini. Biarkan selama dua menit, gunanya adalah untuk menghentikan proses pematangan dan kulit mudah untuk dikelupas.\n    Setelah dua menit, perlahan kelupas kulit telur hingga bersih. Telur bisa dinikmati segera atau dimasukkan ke dalam kulkas bila ingin dinikmati di lain waktu.\n",
       "kategori": "Tips Masak",
       "photo": "https://www.masakapahariini.com/wp-content/uploads/2018/11/cara-buat-telur-separuh-masak-2-768x519.jpg",
       "date": "4-1-2022",
@@ -390,6 +1217,52 @@
         "Quaterly"
       ],
       "id": 4
+    },
+    {
+      "judul": "Dibuang Sayang, Ampas Kopi Ternyata Banyak Manfaatnya",
+      "deskripsi": "Ampas kopi yang dihasilkan dari secangkir kopi tubruk di rumah biasanya akan dibuang begitu saja. Kebiasaan ini bisa kita ubah kalau saja mengetahui bahwa ampas kopi banyak manfaatnya. Beragam manfaat dari ampas kopi ternyata begitu banyak, dari pemanfaatan untuk kecantikan kulit hingga kebersihan rumah.\n\nBahkan, memanfaatkan residu kopi juga dapat membantu mengurangi sampah. Dengan menggunakan bahan alami ini, kita dapat sedikit banyak menghemat budget rumah tangga. Memanfaatkan hal kecil seperti ampas kopi dan digunakan sebagai hal yang bermanfaat akan melatih kita untuk kreatif dalam mengolah sisa makanan dari bahan-bahan yang kita belanjakan.\n\nPenasaran apa saja manfaatnya yang bisa kita dapatkan? Yuk, intip ulasan berikut ini dan semoga tips-tips berikut ini menginspirasi kita untuk untuk turut menjaga bumi ini bersama-sama!\n\nAmpas kopi menghilangkan bau kulkas\n\nKarena aromanya yang khas dan kuat, maka tak heran jika wangi kopi dapat mengalahkan macam-macam bau. Termasuk di antaranya adalah bau tak sedap di kulkas. Salah satu peralatan rumah tangga ini penting untuk kita rawat kebersihannya karena konsumsi kita sehari-hari disimpan di dalamnya.\n\nSegera ambil ampas kopi setelah menyeduhnya, lalu simpan di dalam wadah kaca atau keramik. Simpan di kulkas selama satu hari dan wanginya akan membuat kulkas lebih segar. Selain kulkas, kita juga bisa menghilangkan bau tak sedap pada wastafel atau kamar mandi. Kita bisa melakukannya saat waktu bersih-bersih kulkas ataupun ketika tidak berisi bahan-bahan segar karena baunya dapat bercampur.",
+      "kategori": "Inspirasi Dapur",
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2019/07/ampas-kopi-1024x683.jpg",
+      "date": "9-1-2022",
+      "content": "Premium",
+      "paket": [
+        "Monthly",
+        "Quaterly"
+      ],
+      "id": 5
+    },
+    {
+      "judul": "Kiat-Kiat Merawat Oven Listrik Agar Lebih Tahan Lama",
+      "deskripsi": "Keberadaan oven listrik di dapur sangatlah penting bagi mereka yang senang masak-masak. Oven dapat digunakan untuk berbagai jenis masakan, baik itu memanggang roti, ayam, dan aneka makanan asin maupun manis. Penggunaannya tergolong praktis karena kita dapat mengatur sendiri suhu dan waktu yang pas untuk hidangan yang akan dipanggang.\n\nSecara umum, masa pakai oven listrik bisa berusia panjang. Meski begitu, umur oven bisa berubah pendek jika tidak dilakukan perawatan yang tepat dan rutin. Lalu, apa saja langkah yang perlu dilakukan dalam merawat barang elektronik dapur satu ini? Simak berikut ini, ya!\nPenggunaan aliran listrik oven\n\nSesuai dengan namanya, jenis oven yang satu ini cukup mengandalkan tegangan listrik di rumah agar dapat bekerja. Meski praktis, kesalahan penggunaan pada barang elektronik ini juga kerap terjadi. Maka dari itu, penting bagi kita untuk memahami terlebih dahulu cara kerja dan berbagai konsekuensi dari penggunaannya.\n\nUntuk menghindari hal-hal yang tidak diinginkan seperti korsleting atau kabel hangus, sebaiknya sambungkan kabel ke colokan listrik hanya ketika oven hendak dipakai. Sambungkan langsung dan jangan menggunakan extender agar lebih aman. Jangan lupa lepas kabel kembali dan taruh kepala kabel di tempat yang aman serta terhindar dari kemungkinan adanya genangan air. Selain karena alasan keamanan, tindakan memutus aliran listrik ini juga bisa membantumu menghemat listrik di rumah.",
+      "kategori": "Inspirasi Dapur",
+      "photo": "https://www.masakapahariini.com/wp-content/uploads/2021/07/oven-listrik-dibersihkan.jpg",
+      "date": "9-1-2022",
+      "content": "Premium",
+      "paket": [
+        "Monthly",
+        "Quaterly"
+      ],
+      "id": 6
+    }
+  ],
+  "kategoriArtikel": [
+    {
+      "kategori": "Inspirasi Dapur",
+      "text": "Segala tips dan inspirasi dapur yang akan membantumu mengenali beragam perlengkapan dapur untuk kemudahan hidup sehari-harimu.",
+      "link": "inspirasi",
+      "id": 1
+    },
+    {
+      "kategori": "Makanan & Gaya Hidup",
+      "text": "Perkaya pengetahuan kulinermu melalui artikel-artikel seputar gaya hidup dan tren makanan terbaru yang telah tim MAHI kurasi khusus untukmu.",
+      "link": "makanan",
+      "id": 2
+    },
+    {
+      "kategori": "Tips Masak",
+      "text": "Simak beraneka ragam tips masak dan resep-resep singkat yang akan menjadi inspirasi untuk mengembangkan kemampuan masakmu setiap harinya.",
+      "link": "tips",
+      "id": 3
     }
   ],
   "userTransaction": [
@@ -463,6 +1336,76 @@
       "buktiTransaksi": "https://pbs.twimg.com/media/EdX2hmXUYAE4MXo?format=jpg&name=large",
       "expired": "4/2/2022",
       "id": 3
+    },
+    {
+      "iduser": 5,
+      "username": "bima",
+      "invoice": "#INV/1641742069956",
+      "date": "9/1/2022",
+      "totalPayment": 35000,
+      "detail": [
+        {
+          "paket": "Monthly",
+          "harga": 35000,
+          "durasi": "1 Bulan",
+          "penawaran": [
+            "Akses Semua Resep",
+            "Simpan resep Favoritmu",
+            "Beragam Artikel"
+          ],
+          "id": 2
+        }
+      ],
+      "status": "Terkonfirmasi",
+      "buktiTransaksi": "https://pbs.twimg.com/media/DqaB4FYU0AAN4xV.jpg",
+      "expired": "9/2/2022",
+      "id": 4
+    },
+    {
+      "iduser": 4,
+      "username": "momsky",
+      "invoice": "#INV/1641742183898",
+      "date": "9/1/2022",
+      "totalPayment": 10000,
+      "detail": [
+        {
+          "paket": "Weekly",
+          "harga": 10000,
+          "durasi": "1 Minggu",
+          "penawaran": [
+            "Akses Semua Resep",
+            "Simpan Resep Favoritmu"
+          ],
+          "id": 1
+        }
+      ],
+      "status": "Dibatalkan",
+      "buktiTransaksi": "https://storage.googleapis.com/support-forums-api/attachment/thread-18716086-17280445969701291926.jpg",
+      "expired": "16/1/2022",
+      "id": 5
+    },
+    {
+      "iduser": 6,
+      "username": "windah",
+      "invoice": "#INV/1641745109800",
+      "date": "9/1/2022",
+      "totalPayment": 10000,
+      "detail": [
+        {
+          "paket": "Weekly",
+          "harga": 10000,
+          "durasi": "1 Minggu",
+          "penawaran": [
+            "Akses Semua Resep",
+            "Simpan Resep Favoritmu"
+          ],
+          "id": 1
+        }
+      ],
+      "status": "Terkonfirmasi",
+      "buktiTransaksi": "https://storage.googleapis.com/support-forums-api/attachment/thread-21798375-9089804000950435710.jpg",
+      "expired": "16/1/2022",
+      "id": 6
     }
   ]
 }

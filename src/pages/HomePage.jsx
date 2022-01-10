@@ -2,111 +2,196 @@ import axios from "axios"
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
 import { useSelector } from "react-redux"
-import { Carousel, CarouselIndicators, UncontrolledCarousel } from "reactstrap"
-import { getResepAction } from "../action/resepAction"
+import { Badge, Carousel, CarouselIndicators, FormGroup, Input, InputGroup, UncontrolledCarousel } from "reactstrap"
+import { getResepAction,sortResepAction } from "../action/resepAction"
 import { API_URL } from "../helper"
+import {BiTimeFive} from 'react-icons/bi'
+import {SiCodechef} from 'react-icons/si'
+import { Link, Navigate } from "react-router-dom"
+import {BiSearchAlt,BiCrown} from 'react-icons/bi'
+import {BsBookmark} from 'react-icons/bs'
 
 const HomePage = (props) => {
     const [next, setNext] = useState(false)
     const [prev, setPrev] = useState(false)
     const [dataResep, setDataResep] = useState([])
+    const [dataArtikel, setDataArtikel] = useState([])
+    const [cariResep,setCariResep] = useState({kategori: "",resep: ""})
+    const [pindah, setPindah] = useState(false)
+
+    const dispatch = useDispatch()
 
     useEffect(() => {
         getResep()
     },[])
 
+    const {kategoriResep} = useSelector((state) => {
+        return {
+            kategoriResep: state.kategoriResepReducer.listKategoriResep
+        }
+    })
     const getResep = async () => {
 
         try {
-            let res = await axios.get(`${API_URL}/resep`)
+            let res = await axios.get(`${API_URL}/resep?_sort=id&_order=desc&_limit=6`)
+            let artikel = await axios.get(`${API_URL}/artikel?_sort=id&_order=desc&_limit=3`)
+
             setDataResep(res.data)
+            setDataArtikel(artikel.data)
         } catch (error) {
             console.log(error)
         }
     }
 
-    const carouselInner = () => {
+    const printKategoriResep = () => {
 
-        return dataResep.map((item,index) => {
-            return (
-                <div class="carousel-item">
-                    <img src={item.photo} style={{ width: "60vw", height: "60vh", alignItems: "center" }} class="d-block w-100" alt="..."/>
-                    <div class="carousel-caption d-md-block">
-                        <h5>{item.judul}</h5>
-                        <p>{item.kategori} | porsi : {item.porsi} | {item.lama} | {item.kesulitan}</p>
-                    </div>
+        if(kategoriResep.length > 0) {
+            
+            return kategoriResep.map((item,index) => {
+                return (
+                    <div className="col-12 col-md-4" style={{ cursor: "pointer" }}>
+                    <Link to={`/resep-masakan?q=${item.link}`} className="text-decoration-none" state={kategoriResep[index]}>
+                        <img src={item.photo} width="100%" style={{ borderRadius: "20px", boxShadow: "3px 3px 10px grey" }} />
+                        <h1 className="Poppins text-center " 
+                        style={{ position: "relative", color: "white", top: "-50%", fontWeight: "600", textShadow: '2px 2px 4px #000000'}}>
+                        {item.kategori}</h1>
+                    </Link>
                 </div>
-            )
-        })
+                )
+            })
+        }
+        
     }
 
+    const printResep = () => {
+        
+        if(dataResep.length > 0) {
+
+            return dataResep.map((item,index) => {
+                let textJudul = item.judul
+                let tampil =  textJudul.substr(0, 35)
+                return(
+                    <div className="col-10 col-md-3 mx-3 my-3" style={{ borderRadius: "20px", cursor:"pointer" ,color: "white" ,backgroundColor: "#079992",boxShadow: "1px 1px 10px grey" }}>
+                        <Link to={`/resep?id=${item.id}`} className='text-decoration-none' style={{ color: "white" }}>
+                            <div>
+                                <img src={item.photo} width={"100%"} alt="" style={{ borderTopRightRadius: "20px", borderTopLeftRadius: "20px" }} />
+                                <div className="d-flex justify-content-between">
+                                    <div className="mx-2">
+                                      {
+                                          item.content == "Premium" &&  <Badge color="warning" style={{ color: "white", padding: "3px" }}><BiCrown  size={"1.5vw"}/></Badge> 
+                                      }
+                                    </div>
+                                    <div className="mx-2">
+                                        <BsBookmark size={"1.5vw"} alt="Simpan"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-center mb-3 mx-4 poppins">{tampil}. . .</p>
+                            </div>
+                            <div className="d-flex justify-content-around">
+                                <p className="poppins"><BiTimeFive size={"2vw"}/> {item.lama}</p>
+                                <p className="poppins"><SiCodechef size={"1.6vw"}/> {item.kesulitan}</p>
+                            </div>
+                        </Link>
+                    </div>
+                )
+            })
+        }
+    }
+
+    const printArtikel = () => {
+        if(dataArtikel.length > 0) {
+
+            return dataArtikel.map((item,index) => {
+                return(
+                    <div className="col-10 col-md-3 mx-3 my-3" style={{ borderRadius: "20px", cursor:"pointer" ,color: "white" ,backgroundColor: "#40739e",boxShadow: "1px 1px 10px grey" }}>
+                        <Link to={`/artikel?id=${item.id}`} className='text-decoration-none' style={{ color: "white" }}>
+                            <div>
+                                <img src={item.photo} width={"100%"}  alt="" style={{ borderTopRightRadius: "20px", borderTopLeftRadius: "20px" }} />
+                                <div className="d-flex justify-content-between">
+                                    <div className="mx-2">
+                                        <Badge color="warning" style={{ color: "white", padding: "3px" }}><BiCrown  size={"1.5vw"}/></Badge> 
+                                    </div>
+                                    <div className="mx-2">
+                                        <BsBookmark size={"1.5vw"} alt="Simpan"/>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <p className="text-center mb-3 mx-4 poppins">{item.judul}</p>
+                            </div>
+                        </Link>
+                    </div>
+                )
+            })
+        }
+    }
+
+    const onBtSearch = async () => {
+
+        let data = {
+            ...cariResep
+        }
+
+        let res = await dispatch(getResepAction(data.kategori, data.resep))
+
+        if (res.success){
+            setPindah(true)
+        }
+        
+    }
+
+    
     return (
-        <div className="container">
-            <div id="carouselExampleDark" class="carousel  slide" data-bs-ride="carousel">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+        <div>
+            {
+                pindah && <Navigate to={`resep/search`} state={cariResep} />
+            }
+            <div className="imgBanner">
+                <p className="text-center asap pt-5" style={{ color: "white", fontSize: "85px", fontWeight: "bold",}}>Masak Asik</p>
+                <p className="text-center asap" style={{ color: "white", fontSize: "20px", fontWeight: "bold", letterSpacing: "3px" }}>Temukan Resep Inspirasi dan Artikel Menarik </p>
+                <div className="d-flex justify-content-center">
+                    <FormGroup>
+                       <InputGroup>
+                         <button role={"button"} className="btn btn-primary" onClick={onBtSearch}><BiSearchAlt size={'2vw'}/> </button>
+                    
+                       <Input type="select" style={{ width: "12vw" }} color="success" className="poppins" onChange={(text) => setCariResep({...cariResep,kategori: text.target.value})}>
+                           <option value="">Pilih Kategori</option>
+                           <option value="Dessert">Dessert</option>
+                           <option value="Resep Ayam">Resep Ayam</option>
+                           <option value="Resep Daging">Resep Daging</option>
+                           <option value="Resep Sayuran">Resep Sayuran</option>
+                           <option value="Seafood">Seafood</option>
+                       </Input>
+                       <Input placeholder="Cari resep" style={{ width: "40vw" }} onChange={(text) => setCariResep({...cariResep,resep: text.target.value})}/>
+                       </InputGroup>
+                    </FormGroup>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2018/10/shutterstock_272736824-768x512.jpg" style={{ width: "60vw", height: "60vh", alignItems: "center" }} class="d-block w-100" alt="..."/>
-                    <div class="carousel-caption d-md-block">
-                        <h5></h5>
-                        <p>Cara Membuat Daging BBQ Lezat untuk Kumpul Akhir Tahun</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2021/11/alat-panggang-gas-768x512.jpg" style={{ width: "60vw", height: "60vh" }} class="d-block w-100" alt="..."/>
-                    <div class="carousel-caption d-md-block">
-                        <h5></h5>
-                        <p>3 Alat Panggang Wajib Lirik untuk Acara BBQ Akhir Tahun</p>
-                    </div>
-                    </div>
-                    <div class="carousel-item">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2020/04/Sotong-Bakar-Bumbu-Bali-780x440.jpg" style={{ width: "60vw", height: "60vh" }} class="d-block w-100" alt="..."/>
-                    <div class="carousel-caption d-md-block">
-                        <h5></h5>
-                        <p>Resep Sotong Bakar Bumbu Bali, Pilihan Barbecue Selama di Rumah Aja</p>
-                    </div>
-                    </div>
-                    {carouselInner()}
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
-            <div style={{ marginTop: "2vh", marginBottom: "2vh" }}>
-                <h2 className="text-center">Telusuri berdasarkan</h2>
-            </div>
-            <div className="row justify-content-center" >
-                <div className="col-12 col-md-4">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2021/04/shutterstock_536859760-400x240.jpg" alt="es leci yoghurt disajikan bersama buah-buahan" width="100%" />
-                    <p style={{ position: "relative",textAlign: "center", top: "-50%"}}>ice cream</p>
+            <div className="container">
+                <div className="mt-5">
+                    <h2 className="text-center poppins">Telusuri berdasarkan</h2>
+                    <div className="row justify-content-center" >
+                        {printKategoriResep()}
+                    </div>
                 </div>
-                <div className="col-12 col-md-4">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2021/04/shutterstock_536859760-400x240.jpg" alt="es leci yoghurt disajikan bersama buah-buahan" width="100%" />
-                    <p style={{ position: "relative",textAlign: "center", top: "-50%"}}>ice cream</p>
+                <div>
+                    <h2 className="text-center poppins">Resep Terbaru</h2>
+                    <div className="row">
+                        <div className="col-12 d-flex flex-row flex-wrap justify-content-around">
+                            {printResep()}
+                        </div>
+                    </div>
                 </div>
-                <div className="col-12 col-md-4">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2021/04/shutterstock_536859760-400x240.jpg" alt="es leci yoghurt disajikan bersama buah-buahan" width="100%" />
-                    <p style={{ position: "relative",textAlign: "center", top: "-50%"}}>ice cream</p>
+                <div className="my-3">
+                     <h2 className="text-center poppins">Artikel Menarik</h2>
+                     <div className="row">
+                        <div className="col-12 d-flex flex-row flex-wrap justify-content-around">
+                            {printArtikel()}
+                        </div>
+                    </div>
                 </div>
-                <div className="col-12 col-md-4">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2021/04/shutterstock_536859760-400x240.jpg" alt="es leci yoghurt disajikan bersama buah-buahan" width="100%" />
-                    <p style={{ position: "relative",textAlign: "center", top: "-50%"}}>ice cream</p>
-                </div>
-                <div className="col-12 col-md-4">
-                    <img src="https://www.masakapahariini.com/wp-content/uploads/2021/04/shutterstock_536859760-400x240.jpg" alt="es leci yoghurt disajikan bersama buah-buahan" width="100%" />
-                    <p style={{ position: "relative",textAlign: "center", top: "-50%"}}>ice cream</p>
-                </div>
-                
             </div>
         </div>
     )

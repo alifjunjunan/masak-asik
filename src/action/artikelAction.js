@@ -20,17 +20,30 @@ export const addArtikelAction = (data) => {
     }
 }
 
-export const getArtikelAction = () => {
+export const getArtikelAction = (kategori = null,artikel = null) => {
 
     return async (dispatch) => {
         
         try {
-            let res = await axios.get(`${API_URL}/artikel`)
-            console.log("data artikel =>", res.data)
+            let res
+
+            if (artikel) {
+                if (kategori) {
+                   res = await axios.get(`${API_URL}/artikel?kategori=${kategori}&q=${artikel}`)
+                }
+                    res = await axios.get(`${API_URL}/artikel?q=${artikel}`)
+            } else if (kategori) {
+                res = await axios.get(`${API_URL}/artikel?kategori=${kategori}`)
+            } else {
+                res = await axios.get(`${API_URL}/artikel?_sort=id&_order=desc`)
+            }
+           
             dispatch({
                 type: "GET_ARTIKEL_SUCCESS",
                 payload: res.data
             })
+
+            return {success: true}
         } catch (error) {
             console.log(error)
         }

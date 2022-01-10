@@ -20,17 +20,25 @@ export const addUserTransaction = (data) => {
     }
 }
 
-export const getUserTransaction = () => {
+export const getUserTransaction = (status = null) => {
 
     return async (dispatch) => {
 
         try {
-            let res = await axios.get(`${API_URL}/userTransaction`)
+            let res
+            
+            if(status){
+                res = await axios.get(`${API_URL}/userTransaction?status=${status}`)
+            }else {
+                res = await axios.get(`${API_URL}/userTransaction`)
+            }
 
             dispatch({
                 type: "GET_DATA_TRANSACTION",
                 payload: res.data
             })
+
+            return {success: true}
         } catch (error) {
             console.log(error)
         }

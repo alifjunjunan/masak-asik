@@ -40,3 +40,38 @@
 .poppins {
   font-family: 'Poppins', sans-serif;
 }
+.asap {
+  font-family: 'Asap', sans-serif;
+}
+
+.imgContent {
+  min-height: 35vh;
+  background-image: linear-gradient(to right, rgba(188, 192, 202, 0.52), rgba(97, 97, 97, 0.73)), url("https://image.freepik.com/free-photo/top-view-cropped-hands-senior-cook-unrecognizable-cutting-carrot-cooking-vegetable-stew_1098-20510.jpg");
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.imgBanner {
+  min-height: 70vh;
+  background-image: linear-gradient(to right, rgba(83, 83, 83, 0.52), rgba(97, 97, 97, 0.73)), url("https://image.freepik.com/free-photo/variety-fresh-tasty-vegetables-dark_1220-4444.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.imgSearch {
+  min-height: 25vh;
+  background-image: linear-gradient(to right, rgba(83, 83, 83, 0.52), rgba(97, 97, 97, 0.73)), url("https://image.freepik.com/free-photo/view-kitchen-utensils-flatlay_1098-19770.jpg");
+  background-size: cover;
+  background-position: center;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-shadow: 1px 1px 3px gray;
+}
+
+.imgContentArt {
+  min-height: 35vh;
+  background-image: linear-gradient(to right, rgba(188, 192, 202, 0.52), rgba(97, 97, 97, 0.73)),url("https://image.freepik.com/free-photo/kitchen-with-ingredients-tools_144627-41883.jpg");
+  background-size: cover;
+  background-position: center bottom;
+}

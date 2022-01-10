@@ -6,6 +6,7 @@ import { Button, FormGroup, Input, InputGroup, Label } from 'reactstrap'
 import { addResepAction } from '../action'
 import { AiOutlineDelete, AiOutlineMinusSquare } from "react-icons/ai";
 import {BsPlusSquare} from 'react-icons/bs'
+import { useSelector } from 'react-redux'
 
 const TambahResepPage = () => {
 
@@ -14,6 +15,12 @@ const TambahResepPage = () => {
     const [resep, setResep] = useState({judul: "", deskripsi: "", kategori: "", porsi: "", kesulitan: "", lama: "",bahan: [],instruksi: [] ,photo: "" ,content: "" })
     const [pindah, setpindah] = useState(false)
     const dispatch = useDispatch()
+
+    const {kategoriResep} = useSelector((state) => {
+        return {
+            kategoriResep: state.kategoriResepReducer.listKategoriResep
+        }
+    })
 
     const onBtAddBahan = () => {
 
@@ -80,6 +87,17 @@ const TambahResepPage = () => {
                             onChange={(event) => handleLangkahPhoto(event,index)}/>
                         </FormGroup>
                     </div>
+                )
+            })
+        }
+    }
+
+    const printKategori = () => {
+
+        if (kategoriResep.length > 0) {
+            return kategoriResep.map((item,index) => {
+                return (
+                    <option value={item.kategori}>{item.kategori}</option>
                 )
             })
         }
@@ -171,9 +189,11 @@ const TambahResepPage = () => {
                                 </FormGroup>
                             </InputGroup>
                             <FormGroup>
-                                <Label>Kategori Resep</Label>
-                                <Input placeholder='Dessert' value={resep.kategori}
-                                 onChange={(text) => setResep({...resep, kategori: text.target.value})}/>
+                            <Label>Kategori Resep</Label>
+                                <Input type='select' onChange={(text) => setResep({...resep, kategori: text.target.value})}>
+                                    <option value="">Pilih Kategori</option>
+                                    {printKategori()}
+                                </Input>
                             </FormGroup>
                             <FormGroup>
                                 <Label>Tingkat Kesulitan</Label>
