@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/masak-asik/static/css/main.e504e195.css",
+    "main.js": "/masak-asik/static/js/main.2affdbd3.js",
+    "static/js/787.f4c0a0a4.chunk.js": "/masak-asik/static/js/787.f4c0a0a4.chunk.js",
+    "index.html": "/masak-asik/index.html",
+    "main.e504e195.css.map": "/masak-asik/static/css/main.e504e195.css.map",
+    "main.2affdbd3.js.map": "/masak-asik/static/js/main.2affdbd3.js.map",
+    "787.f4c0a0a4.chunk.js.map": "/masak-asik/static/js/787.f4c0a0a4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e504e195.css",
+    "static/js/main.2affdbd3.js"
+  ]
+}
